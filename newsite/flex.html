@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="Viewport" content="width=device-width, initial-scale=1.0">
+        <title>Flex Box Example</title>
+        
+        <style>
+            body {
+                 background-color:black;
+            }
+            #container {
+               display:flex;
+               flex-direction:row;
+            }
+            #flex1 {
+                background-color:rgb(10,50,100);
+                order:2;
+                padding:10px;
+                flex:2;
+            }
+            #flex2 {
+                background-color:rgb(10,100,150);
+                order:3;
+                padding:10px;
+                flex:1;
+            }
+            #flex3 {
+                background-color:rgb(50,150,200);
+                order:4;
+                padding:10px;
+                flex:1;
+            }
+            #flex4 {
+                background-color:rgb(100,200,255);
+                order:1;
+                padding:10px;
+                flex:1;
+            }
+            
+            @media (max-width:600px){
+                #container {
+                    display:flex;
+                    flex-direction:column;
+                }   
+            }
+        </style>
+        
+    </head>
+    <body>
+        <div id="container">
+            <div id="flex1">
+                <h1> 1st Flex Box</h1>
+                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            </div>
+            <div id="flex2">
+                <h1> 2nd Flex Box</h1>
+                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            </div>
+            <div id="flex3">
+                <h1> 3rd Flex Box</h1>
+                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            </div>
+            <div id="flex4">
+                <h1> 4th Flex Box</h1>
+                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            </div>
+        </div>
+    </body>
+</html>

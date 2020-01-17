@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400&display=swap');
+html {
+    margin:0;
+    padding:0;
+    font-family: 'Raleway', sans-serif;
+}
+body {
+    font-family: 'Raleway', sans-serif;
+}
+.h-30 {
+    height:30vh;
+}
+.center {
+    text-align: center;
+    margin:0 auto;
+}
+.background-image {
+    background-image:url(/images/image1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+}
+nav.navbar.navbar-inverse {
+    margin:0;
+}
+.mainpage {
+    
+    height:100vh;
+}
+.white {
+    color:white;
+}
+.row {
+    margin-top:0;
+    margin-bottom:0;
+}
+.blue {
+    background-color:rgb(50,100,150);
+}
+.image {
+    width:30rem;
+}
+.fullwidth {
+    width:50%;
+}
+.circle {
+    background-image:url(/images/garfield.jpg);
+    background-position:center;
+    background-size: contain;
+    background-repeat:none;
+    width:170px;
+    height:150px;
+    text-align: center;
+    align-content: center;
+    border-radius:50%;
+}
+#contact {
+    background-color:darkslategray;
+}
+footer {
+    background-color:aqua;
+    padding:20px;
+    border-radius:0 0 50% 50%;
+    color:black;
+}
+#container {
+               display:flex;
+               flex-direction:row;
+            }
+#containerintro {
+               display:flex;
+               flex-direction:column;
+            }
+#containernews {
+               display:flex;
+               flex-direction:row;
+            }
+#blue {
+               display:flex;
+               flex-direction:row;
+    background-color:rgb(50,100,150);
+            }
+
+            #flex1 {
+                
+                order:1;
+                padding:10px;
+                
+            }
+            #flex2 {
+               
+                order:2;
+                padding:10px;
+               
+            }
+            #flex3 {
+               
+                order:3;
+                padding:10px;
+                
+            }
+            #flex4 {
+                
+                order:4;
+                padding:10px;
+               
+            }
+            #flexa {
+                
+                order:1;
+                padding:10px;
+                
+            }
+            #flexb {
+               
+                order:2;
+                padding:10px;
+               
+            }
+            #flexc {
+               
+                order:3;
+                padding:10px;
+                
+            }
+            #flexd {
+                
+                order:4;
+                padding:10px;
+               
+            }
+          @media screen and (max-width:768px){
+    
+    .block {
+        width:100%;
+        float:none;
+        text-align:center;
+        padding:10px;
+    }
+    .sidebar {
+        display:none;
+    }
+    #container, #containernews {
+                    display:flex;
+                    flex-direction:column;
+                } 
+              .image {
+                  width:100%;
+              }
+              .fullwidth {
+                  width:100%;
+              }
+}  
