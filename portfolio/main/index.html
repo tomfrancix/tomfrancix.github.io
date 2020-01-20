@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href=bootstrap/css/bootstrap.min.css>
+        <link rel="stylesheet" type="text/css" href=bootstrap/css/bootstrap-grid.min.css>
+        <link rel="stylesheet" type="text/css" href=bootstrap/css/bootstrap-reboot.min.css>
+        <link rel="stylesheet" type="text/css" href=bootstrap/js/bootstrap.bundle.min.js>
+        <link rel="stylesheet" type="text/css" href=bootstrap/js/bootstrap.min.js>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+       
+       <!--HEADER ---------->
+        <header>
+            <div id="logo">
+                <img src="images/iphone.jpg">
+            </div>
+            <div id="headerimg">
+                <img src="images/head.jpeg">
+            </div>
+            <div id="details"><br>
+                <h1 class="white">Thomas Fahey: Front End Web Developer.</h1>
+                <p class="darkorange">Foward thinking approaches to web design.</p><br><br>
+                <h1 class="number">07739-583-148</h1><br>
+                <p class="darkorange">Email: thomasfahey@mail.com</p>
+            </div>
+        </header>
+        <!--NAVIGATION --------->
+        <nav class="navbar navbar-inverse sticky-top">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">Thomas Fahey</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Work Experience</a></li>
+                <li><a href="#">Interests</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <!----MENU SELECT --------->
+        <div class="container-fluid orange">
+           <div id="menuselect">
+            <div id="flex1">
+                
+            </div>
+            <div id="flex2">
+                
+            </div>
+            <div id="flex3">
+                
+            </div>
+            <div id="flex4" class="center">
+            
+            </div>
+        </div>
+        </div>
+        <div class="container-fluid h-100 ">
+            <center><h1 class="white black title">My Portfolio</h1></center>
+                <div id="portfolioselect">
+                <aside id="sidebar"><br><br>
+                    <center><h1>Thomas Fahey</h1></center><br>
+                    <hr class="black"><br>
+                    <div class="center">
+                        <div id="picture" class="center profile"></div>
+                    </div>
+                    <div id="bio">
+                        <h3 id="titlep" style="font-weight:bold;">Bio:</h3>
+                        <hr class="black">
+                        <p id="bioparagraph">I am a <b>front-end web developer</b> with a great deal of experience in design and engineering. I have a degree in Psychology and Statistics from the University of Southampton where I was the Academic President of Education. The psychology of web design is often overlooked but I consider this a central concept.</p>
+                    </div>
+                </aside>
+                <div id="webwindows">
+                <div id="flex-group1">
+               <div id="pflex1" class="whitebackground" onmouseover="document.getElementById('bioparagraph').innerHTML = 'This is a WHOLE other piece of text!'" onmouseover="document.getElementById('titlep').innerHTML = 'hello'">
+                   <center><h4>Christophers Tillandsia</h4></center>
+                   <hr class="black">
+                   <center><img src="images/website.jpg" width="315"></center>
+                   <button class="btn btn-info" type="button">Visit Website</button>
+                </div>
+                <div id="pflex2" class="whitebackground">
+                   <center><h4>Freedive Wexford</h4></center>
+                   <hr class="black">
+                    <center><img src="images/website.jpg" width="315"></center>
+                   <button class="btn btn-info" type="button">Visit Website</button>
+                </div>
+                </div>
+                <div id="flex-group2">
+                <div id="pflex3" class="whitebackground">
+                   <center><h4>Mountaineering Excursions</h4></center>
+                   <hr class="black">
+                    <center><img src="images/website.jpg" width="315"></center>
+                   <button class="btn btn-info" type="button">Visit Website</button>
+                </div>
+                <div id="pflex4" class="center whitebackground">
+                   <center><h4>Sparky Line</h4></center>
+                   <hr class="black">
+                    <center><img src="images/website.jpg" width="315"></center>
+                   <button class="btn btn-info" type="button">Visit Website</button>
+                </div>
+                </div>
+            </div>
+            </div>
+            <br>
+        </div>
+        <div class="container-fluid h-100 blue">
+            <center><h1 class="white black title">Work Experience</h1></center>
+            <div class="container gradient portfolioselect">
+            <div id="pflex1">
+                   <center><h1 class="title">LFB Maintenance Electrician</h1>
+                   <p style="color:black; font-size: 200%;">3 years</p></center>
+                </div>
+                <div id="pflex2">
+                    <center><h1 class="title bottom">Freeland Guitar Teacher</h1>
+                    <p style="color:black; font-size: 200%;">3 years</p></center>
+                </div>
+                <div id="pflex3">
+                    <center><h1 class="title">Trainee Civil Engineer</h1>
+                    <p style="color:black; font-size: 200%;">3 years</p></center>
+                </div>
+                <div id="pflex4" class="center">
+                    <center><h1 class="title bottom">Office Clerk</h1>
+                    <p style="color:black; font-size: 200%;">3 years</p></center>
+                </div>
+            </div>
+            </div>
+        </div>
+    </body>
+</html>
