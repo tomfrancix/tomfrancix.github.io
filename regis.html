@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>
+            Time
+        </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width-device-width, initial-scale=1">
+        <style>
+            html {
+                width:100%;
+            }
+            body {
+                padding:100px;
+                width:80%;
+                margin:0 auto;
+                background-color:rgb(140,140,155);
+                text-align: center;
+                color:white;
+            }
+            #container {
+                width:60%;
+                margin:100px;
+                margin:0 auto;
+                border-radius:100px;
+                border:3px solid grey;
+                background-color:rgb(0,0,5);
+                padding:50px;
+                height:1000px;
+            }
+            .btn {
+                width:100%;
+                background-color:skyblue;
+                color:black;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <h1 style="font-weight:800;">Regular Expressions</h1>
+            <p> Original string: "JavaScript is fun!"</p>
+            
+            JS Expression Position for 'fun':
+                <hr> 
+                 <p style="font-weight:800;color:red;font-size:300%;" id="demo1"></p>
+                 <hr>
+            JS Expression Replace String: 
+                <p style="font-weight:800;color:darkred;" id="demo2"></p>
+        <hr>
+        <script>
+            var str = "Javascript is fun!";
+            var n = str.search(/fun/ig);
+                document.getElementById('demo1').innerHTML = n;
+            
+            var repl = str.replace("fun", "Front End Language:");
+                document.getElementById('demo2').innerHTML = repl;  
+        </script>
+        
+        <h2> Example of g and i modifiers</h2>
+            <div id="global"></div>
+            
+        <script>
+            var str = "Welcome to the JavaScript training.";
+            var ptrn = /T/gi;
+            var result = str.match(ptrn);
+                document.getElementById('global').innerHTML = result;
+        </script>
+        <br>
+        
+        <input type="text" id="input1">
+         <br> <br>
+         <input  class="btn" type="button" onclick="chkNumber()" value="chkNumber">
+        <br><br>
+        <script>
+        
+            function chkNumber() {
+                var userInput = document.getElementById('input1').value;
+                var strng = document.getElementById('input1');
+                var leng = strng.length;
+                console.log(strng);
+                var reg = /^\d+$/;
+                var inputs = userInput.search(reg);
+                    if(userInput.search(reg)==0) {
+                            alert(userInput + " is a number!")
+
+                        } else if(strng.length<1) {
+                            alert("You didnt type anything....")
+                        } else if (userInput.search(reg)== -1){
+                            alert(userInput + " is NOT a number!")
+                        }
+                    }
+            
+        </script>
+    
+        
+     </div>   
+    </body>
+</html>
