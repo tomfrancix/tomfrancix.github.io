@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>
+            ARRAYS IN JAVASCRIPT
+        </title>
+        <meta charset="utf-8">
+        <style>
+            body {
+                text-align:center;
+                background-color:aquamarine;
+                color:rgb(0,0,50);
+                
+            }
+            .main {
+                margin:0 auto;
+            }
+            #text-box {
+                
+                width:50%;
+            }
+            .button {
+                width:25%;
+                margin:30px;
+                background-color:rgb(0,0,50);
+                color:white;
+                padding:10px;
+                
+            }
+            li {
+                list-style:none;
+                padding:0;
+                margin:0;
+                
+            }
+        </style>
+    </head>
+    <body>
+    <br>
+    <div class="main" style="width:50%;">
+    <h1>ENTER CITY NAME:</h1>
+    <input type="text" id="textbox" placeholder="eg. Paris">
+    <br><br>
+    <div style="font-size:200%;" id="citydisplay"></div>
+    <br>
+    <div id="cityfound"></div>
+    <br>
+    <h3 id="citypos"></h3><div id="cityposition"></div>
+    
+    <input type="button" class="button" value="Search..." onclick="myFunction()">
+    <br>
+    <div id="displayall"></div>
+    <div id="displaylist"></div>
+    
+    <script>
+        var city = ["LONDON", "PARIS", "TOKYO", "BERLIN", "WASHINGTON"];
+        
+        function myFunction(x) {
+            var textrand =document.getElementById('textbox');
+            var text = textrand.value.toUpperCase();
+            var citydisplay = document.getElementById('citydisplay');
+            var cityfound = document.getElementById('cityfound');
+            var displayall = document.getElementById('displayall');
+                
+            console.log(text);
+            
+            var position = city.indexOf(text);
+            console.log(position);
+            citydisplay.innerHTML = text;
+            position = parseInt(position);
+        
+                if (position>=0) {
+                    cityfound.innerHTML = "City Found!";
+                    citypos.innerHTML = "City Position:";
+                    cityposition.innerHTML = position + 1;
+                    displayall.innerHTML = "<input type='button' class='button' value='DISPLAY-ALL?' onclick='myFunction2(textbox.value)'>"
+                } else {
+                    cityfound.innerHTML = "No known city exists on the database..."
+                    displayall.innerHTML = "<input type='button' class='button' value='DISPLAY-ALL' onclick='myFunction(textbox.value)'>"
+                }
+                
+        }
+         function myFunction2() {
+            city.sort();
+            city.pop();
+            var text="<ul>";
+            for(var i=0; i<city.length; i++) {
+                text+="<li>"+city[i]+"</li>";
+            }
+            text+="</ul>";
+            document.getElementById('displaylist').innerHTML = text;
+         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </script>
+    
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </body>
+</html>
+      

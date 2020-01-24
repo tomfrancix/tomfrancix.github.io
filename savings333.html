@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" media="all" href="style.css">
+    <title></title>
+	<style>
+	body{
+	width:80%;
+	margin:auto;
+	}
+	</style>
+</head>
+
+<body>
+ 
+            <H2>Savings Account</H2>
+    
+             <label>Account Holder </label>   <label id="accountholder"></label> <br>           
+            <label>Account Balance £ </label>   <label id="balance"></label>
+  
+    <hr>
+ 
+            <label>Transaction Type</label>
+            <label>
+                <select id="transactionType">
+                    <option value=1>Please Select</option>
+                    <option value=2>Withdrawl</option>
+                    <option value=3>Payment</option>
+                </select>
+            </label>
+
+            <div>
+                Amount
+                <input type="number" id="amount" maxlength="8" size="1" /><br /><br />
+                <button id="button1">Complete Transaction</button>
+            </div>
+
+        <hr>
+
+
+            <div id="transactionMessage"></div>
+ 
+
+
+<!--
+        <div class="flex-itemheader1col">
+            <H5>Objects in Javascript</H5>
+        </div>
+-->
+
+
+    <!-- <script src="controller.js"> -->
+    <script>
+        /* ********************************************* */
+        //EVENT LISTENERS 
+        //window.addEventListener('load', gameSetup, false)
+
+        var event1 = document.getElementById("button1");
+        event1.addEventListener('click', main, false);
+
+        // MAIN
+        /* ********************************************* */
+
+        function main() {
+
+            //Execute transaction
+            Account.transaction(document.getElementById("transactionType").value, document.getElementById("amount").value);
+
+            //Display new balance   
+			 document.getElementById("balance").innerHTML = Account.Balance;
+            document.getElementById("transactionMessage").innerHTML = Account.Balance;
+        }
+
+        // Create an OBJECT LITERAL 
+        /* ********************************************* */
+        var Account = {
+            Name: "Alex",
+            Balance: 5000,
+
+            transaction: function(theType, theAmount) {
+                if (theType == 1) {
+                    alert("Please select a transaction type")
+                } else if (theType == 2) {
+                    console.log("CHECK WD " + theType + " " + theAmount);
+                     Account.withdrawl(theAmount);
+
+                } else if (theType == 3) {
+                    console.log("CHECK PY: " + theType + " " + theAmount);
+                    Account.payment(theAmount);
+                }
+            },
+
+            payment: function(paymentAmount) {
+                Account.Balance = parseInt(Account.Balance) + parseInt(paymentAmount);
+                return Account.Balance;
+            },
+
+            withdrawl: function(paymentAmount) {
+                Account.Balance = parseInt(Account.Balance) - parseInt(paymentAmount);
+
+                return this.Balance;
+            }
+
+        };
+        /* ********************************************* */
+
+        //show initial the balance
+         document.getElementById("accountholder").innerHTML = Account.Name;
+        document.getElementById("balance").innerHTML = Account.Balance;
+    </script>
+</body>
+</html>

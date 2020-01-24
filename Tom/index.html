@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>
+            Time
+        </title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+     <br>
+      ENTER INITIAL VALUE OF LOOPS: <input type="number" id="input1"> 
+      
+      <br>
+      <br>
+      
+      ENTER END VALUE OF LOOPS: <input type="number" id="input2">
+      <br>
+      <br>
+    
+      ENTER INCREMENT VALUE: <input type="number" id="input3">
+      <br>
+      <br>
+      <!-- PASS THE VALUE OF THE INPUT INTO THE FUNCTION --->
+      <button type="button" onclick="forloop(input1.value, input2.value, input3.value)">FOR LOOP</button>
+      <button type="button" onclick="dowhile(input1.value, input2.value, input3.value)">DO WHILE</button>
+      <button type="button" onclick="whileloop(input1.value, input2.value, input3.value)">WHILE</button>
+       <h1> For While and Do-While Loops</h1>
+       
+       <h3> For Loop</h3>
+       <div id="forloopjust9"></div>
+        <div id="forloop"></div>
+        <br>
+        
+        <h3> Do-While</h3>
+        <div id="dowhile"></div>
+        
+        <h3> While Loop</h3>
+        <div id="whileloop"></div>
+       
+       <script>
+           
+// asigns 0 first, 1, 2, 3... up to 9....
+//            for(var i=0; i<10; i++)
+//                {
+//                    document.getElementById('forloopjust9').innerHTML = i;
+//                }
+//        // How can we get all the values?  ADD ( x = x + y ) OR ( x += y )
+//        // if the ~~~innerHTML is made equal to i, previous numbers will be lost.
+//        // if the ~~~innerHTML is added to i and then made equal to ~~~innerHTML, info is preserved.
+//            for(var i=0; i<10; i++)
+//                {
+//                     document.getElementById('forloop').innerHTML = document.getElementById('forloop').innerHTML + i;
+//                }
+//            // for space; and simplify to x+=y instead of x=x+y;
+//            for(var i=0; i<10; i++)
+//                {
+//                    document.getElementById('forloop').innerHTML += i + " ";
+//                }
+ //for new line; add <br>-------- INSERT i INTO FUNCTION PARAMETER. i INITIALISES WITH THE INPUT VALUE THATS SENT!
+           // you must declare first parameter as i=i or just ';'  ------
+        function forloop(i, x, a) {
+            
+            a = parseInt(a);
+            i = parseInt(i);
+            
+           for(; i<x; i+=a)
+                {
+                    document.getElementById('forloop').innerHTML += i + "<br>";
+                }
+        }
+//DO LOOP ----------GOOD WHEN CONDITION IS DEPENDANT ON USER INPUT--------------
+           //----- INSERT i INTO FUNCTION PARAMETER. i INITIALISES WITH THE INPUT VALUE THATS SENT!
+        function dowhile(i, x, a) {
+           a = parseInt(a);
+            i = parseInt(i);
+           //you must remove the i=0 initialiser.
+           do {
+                document.getElementById('dowhile').innerHTML += i + " "; 
+               i+=a ;
+            } while(i<=x);
+        }
+        //WHILE LOOP -----------------------;
+           //WHIOLE
+           ///only outputs 11 because the initial value is not here.
+//           while(i<=11) { 
+//               document.getElementById('whileloop').innerHTML += i;
+//               i++;
+//           }
+//INITIALISE THE VARIABLE WITH var i = 1;
+//----- INSERT i INTO FUNCTION PARAMETER. i INITIALISES WITH THE INPUT VALUE THATS SENT!
+        function whileloop(i, x, a) {
+            
+            a = parseInt(a);
+            i = parseInt(i);
+            //you must remove the i=0 initialiser. 
+            console.log(a);
+           while(i<=x) { 
+               document.getElementById('whileloop').innerHTML += i;
+               i+=a;
+           }
+        }
+        </script>
+        
+    </body>
+</html>

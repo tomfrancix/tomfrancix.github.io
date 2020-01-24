@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>V, C and N</title>
+</head>
+<body>
+	<h1>V, C and N</h1>
+	<br>
+	Text
+	<br>
+	<input type="text" id="userInput" />
+	<br>
+	<br>
+	
+	<button onclick="filter(userInput.value)">Filter</button>
+	<br>
+	<br><br>
+	<h3>Vowels</h3>
+	<div id="vowels"></div>
+	<h3>Numbers</h3>
+	<div id="numbers"></div>
+	<h3>Consonants</h3>
+	<div id="consonants"></div>
+	<h3>Email</h3>
+	<div id="email"></div>
+	<h3>URL</h3>
+	<div id="url"></div>
+
+	<script type="text/javascript">
+		function filter(value){
+			var userInput = value;
+			var regexV = /[aeiou]/;
+			var regexN = /\d/;
+			var regexC = /[a-z]/i;
+            var regexEmail = /\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/gi;
+            var regexurl = /([^?#]*))?(?:\?([^#]*))?(?:#(.*))?$/;
+            
+//           document.getElementById('resultD').innerHTML = userInput.match(regexEmail);
+
+			for(var i = 0; i <= value.length; i++){
+				if (userInput[i].search(regexV) == 0) {
+					document.getElementById('vowels').innerHTML += userInput[i];
+				}
+				else if(userInput[i].search(regexN) == 0){
+					document.getElementById('numbers').innerHTML += userInput[i];
+				}
+				else if (userInput[i].search(regexC) == 0){
+					document.getElementById('consonants').innerHTML += userInput[i];
+                }
+                else if (userInput.match(regexEmail)) {
+                    document.getElementById('email').innerHTML = userInput.match(regexEmail);
+				}
+                else if (userInput.match(regexurl)) {
+                    document.getElementById('url').innerHTML = 
+                    userInput.match(regexEmail);
+                } 
+                else if (userInput[i] == ""){
+					alert("You have not entered anything");
+				}
+			}
+		}
+	</script>
+</body>
+</html>

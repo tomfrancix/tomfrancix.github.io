@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>
+            CONSTRUCTOR OBJECTS
+        </title>
+        <meta charset="utf-8">
+        <style>
+            body {
+                background-color:rgb(0,0,30); 
+      
+            }
+            #container {
+                width:80vw;
+                height:100vh;
+                margin:0 auto;
+                background-color:beige;
+                text-align: center;
+                color:black;
+            }
+            table {
+                padding:10px;
+                margin:0 auto;
+            }
+            table tr th, td {
+                width:100px;;
+                border:1px solid black;
+            }
+        </style>
+    </head>
+<body>
+   
+    <h1 style="color:white; text-align: center;">CONSTRUCTOR OBJECTS</h1>
+    <div id="container" style="text-align: center;">
+    <br><br>
+    <div id="demo"></div>
+    <br><br>
+       
+    <div id='table'> </div>
+        
+          
+    </div>
+    
+    <script>
+        var studentId, firstName, LastName, gender, email;
+        
+        ///2.  THIS FUNCTIONS PARAMETERS ARE ASSIGNED (BELOW)
+        function students(id, firstName, lastName, gender, email) {
+        ///3. (TO HERE)
+            this.studentId = id;
+            this.firstName = firstName;
+            this.lastName  = lastName;
+            this.gender    = gender;
+            this.email     = email;
+        }
+        /// 1. THE FUNCTION NEW STUDENTS() SENDS INPUT TO FUNCTION ABOVE (GO THERE)
+        var student = [];
+        
+        student[0] = new students(101, 'Johnny', 'Johnny', 'male', 'johnny@yahoo.com');
+        student[1] = new students(101, 'Jimmy', 'Johnny', 'male', 'johnny@yahoo.com');
+        student[2] = new students(101, 'James', 'Johnny', 'male', 'johnny@yahoo.com');
+        student[3] = new students(101, 'Johnny', 'Johnny', 'male', 'johnny@yahoo.com');
+        student[4] = new students(101, 'John', 'Johnny', 'male', 'johnny@yahoo.com');
+        student[5] = new students(101, 'Jill', 'Johnny', 'female', 'johnny@yahoo.com');
+        student[6] = new students(101, 'Jack', 'Johnny', 'male', 'johnny@yahoo.com');
+       
+        
+//    for(var i=0; i<student.length; i++) {
+//
+//        document.getElementById('demo').innerHTML += student[i].studentId+" "+student[i].firstName+" "+student[i].email +"<br><br>";
+//    }
+
+    var tablehead = " <table id='newrow' style='text-align: center;'> <tr> <th>Student Id</th> <th>First Name</th><th>Last Name</th><th>Gender</th>         <th>Email</th></tr>";
+        
+    for(var i=0; i<student.length; i++) {
+
+        tablehead += "<tr><td>" + student[i].studentId + "</td><td>" + student[i].firstName + "</td><td>" + student[i].lastName + "</td><td>" + student[i].gender + "</td><td>" + student[i].email + "</td></tr>";
+         
+    }
+       
+      tablehead+="</table>";  document.getElementById('table').innerHTML=tablehead;
+        
+        
+    </script>
+    </body>
+</html>

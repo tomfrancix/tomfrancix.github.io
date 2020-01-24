@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>
+            Time
+        </title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+    <br>
+    <br>
+    <h1>Find Vowels, Consonants and Numbers</h1>
+    <br><br>
+    <div id="box">
+        <h3>Text:</h3>
+        <br>
+        <input type="text" id="input"><h4>This is 1 test string</h4>
+        <button onclick="checkstring()" type="button" class="button"><h4>Submit</h4></button>
+        Vowels are:<p id="1"></p>
+        Numbers are:<p id="2"></p>
+  
+    <script>
+    
+        function checkstring() {
+            
+            var vowels = document.getElementById('1').innerHTML;
+            var numbers = document.getElementById('2').innerHTML;
+
+            var regexVowels = /[aeiou]/gi;
+            var regexNumbers = /\d/;
+            
+            var text = document.getElementById('input').value;
+            
+            for(var i = 0; i< text.length; i++) {
+                
+                if(text[i].match('regexVowels')!=null) {
+                    vowels += text[i] + ", ";
+                    
+                } else (text[i].match(/^[0-9]+$/) != null) {
+                    number += text[i] + ", ";
+                }
+            }
+            vowels +=   
+        }
+            
+            /*var vowels = new Array['a', 'e', 'i', 'o', 'u'];
+                var userInput = document.getElementById('input').value;
+                var strng = document.getElementById('input');
+                var text = strng.toLowerCase();
+                var para1 = document.getElementById('vowel');
+                var para2 = document.getElementById('number');
+            
+                if(text.match(/vowels/gi)){
+                    var vowelstring = string.match(/[aeiou]/gi)
+                    para1.innerHTML += 'vowelstring';
+                } else {
+                    return 0
+                }*/
+                
+               
+    </script>
+    </div>
+    </body>
+</html>

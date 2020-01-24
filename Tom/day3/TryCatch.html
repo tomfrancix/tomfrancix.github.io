@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>
+            Time
+        </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width-device-width, initial-scale=1">
+        <style>
+        
+            body {
+                text-align: center;
+            }</style>
+    </head>
+    <body>
+        <h1 style="font-weight:800;">Regular Expressions</h1>
+        <div id="catch"></div>
+        <div id="finally"></div>
+        
+        <script>
+        
+            try {
+                alert("Welcome to JS");
+            }
+            catch(er) {
+                document.getElementById('catch').innerHTML = er.message;
+            }
+            
+        </script>
+        <hr>
+        <input type="text" id="input1"><br><br>
+        <input type="button" onclick="validation()" value="ValidateInput">
+        <p id="message"></p>
+        
+        <script>
+        function validation() {
+            var x = document.getElementById('input1').value;
+            try {
+                if(x=="") throw "Empty box...";
+                if(isNaN(x)) throw "This is not a number...";
+                if(x<5) throw "Input is less than 5...";
+                if(x>10) throw "Input is less than 10...";
+                if(x>=5 && x<=10) throw "Correct Range!";
+            }
+            catch(err) {
+                document.getElementById('message').innerHTML ="You message is empty!";
+            }}
+        
+        </script>
+     </body>
+</html>

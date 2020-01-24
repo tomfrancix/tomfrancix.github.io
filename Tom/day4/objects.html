@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>
+            OBJECTS
+        </title>
+        <meta charset="utf-8">
+        <style>
+            body {
+                background-color:rgb(0,0,30); 
+      
+            }
+            #container {
+                width:80vw;
+                height:100vh;
+                margin:0 auto;
+                background-color:beige;
+                text-align: center;
+                color:black;
+            }
+        </style>
+    </head>
+<body>
+   
+    <h1 style="color:white; text-align: center;">OBJECTS</h1>
+    <div id="container">
+    <br><br>
+    <div id="demo"></div>
+    <br><br>
+    <ol>
+    <div id="emps"></div>  
+    </ol>
+        
+          
+    </div>
+<script>
+//    var person = {firstName="John, lastName="Smith};
+//    
+//    function person(first,last, age, eye) {
+//        this.firstName = first;
+//        this.lastName = last;
+//        this.age = age;
+//        this.eyColor = eye;
+//        this.name = function() {
+//            return this.firstName="" +this.lastName
+//        };
+//    }
+//       var student = new person("John", "Smith", 50, "blue");
+//       console.log(student.name());
+
+    var learner = {
+        firstName: 'Super' ,
+        lastName: 'Ian' ,
+        age: 30 ,
+        children: ['Braina', 'Nicholas'],
+        address:{
+            street:'33 Morrab',
+            city: 'London',
+            postcode:'EH75KD'
+        }
+    }
+       console.log(learner.firstName);
+       document.getElementById('demo').innerHTML=learner.firstName + " is " + learner.age + " years old.";
+        
+    var employees=[
+        {name:'Tom' ,
+         gender:'Male' ,
+         age:39 ,
+         email:'tom@mail.com'
+        },
+        {name:'Santi' ,
+         gender:'Male' ,
+         age:107 ,
+         email:'santi@mail.com'
+        },
+        {name:'John' ,
+         gender:'Male' ,
+         age:32 ,
+         email:'john@mail.com'
+        },
+        {name:'Max' ,
+         gender:'Male' ,
+         age:25 ,
+         email:'max@mail.com'
+        }
+    ] 
+    
+    /*for(var i=0; i<employees.length; i++) {
+       document.getElementById('emps').innerHTML += "<li>" + employees[i].name + " is " + employees[i].age + " years old!" + "</li><br><br>"; 
+    }*/
+    var list='';
+    var listclose='';
+    for(var i=0; i<employees.length; i++) {
+        list += "<li>";
+        list += "<ol><li>" + employees[i].name + "</li><li>" + employees[i].gender + "</li><li>" + employees[i].age + "</li></ol>";
+        list += "</li>";
+    }
+        document.getElementById('emps').innerHTML=list;
+        ///TO CONVERT OBJECTS ARRAY INTO JSON DATA FORMAT---------
+    console.log(employees);
+    var jsEmployees = JSON.stringify(employees);
+    console.log(jsEmployees);
+    
+</script>
+</body>
+</html>

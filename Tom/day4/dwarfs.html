@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>
+            DWARFS
+        </title>
+        <meta charset="utf-8">
+        <style>
+            body {
+                background-color:rgb(0,0,30); 
+      
+            }
+            #container {
+                width:80vw;
+                height:100vh;
+                margin:0 auto;
+                background-color:beige;
+                text-align: center;
+                color:black;
+            }
+            table {
+                padding:10px;
+                margin:0 auto;
+            }
+            table tr th, td {
+                width:100px;;
+                border:1px solid black;
+            }
+        </style>
+    </head>
+<body>
+   
+    <h1 style="color:white; text-align: center;">CONSTRUCTOR OBJECTS</h1>
+    <div id="container" style="text-align: center;">
+    <br><br>
+    <div id="demo"></div>
+    <br><br>
+    <div id="demo1"></div>
+        
+          
+    </div>
+    
+    <script>
+        var dwarfName, dwarfAge, dwarfImg;
+        
+        function dwarfs(dwarfName, dwarfAge, dwarfImg) {
+    
+            this.dwarfName = dwarfName;
+            this.dwarfAge  = dwarfAge;
+            this.dwarfImg  = dwarfImg;
+          //  this.dwarfImg  = dwarfImg;
+    
+        }
+       
+        var dwarf = [];
+        var randomAge = parseInt(Math.floor(Math.random() * 22) + 18);
+        
+        dwarf[0] = new dwarfs('Happy', randomAge, "<img src='1.jpg'>");
+        dwarf[1] = new dwarfs('Grumpy', randomAge, "<img src='2.jpg'>");;
+        dwarf[2] = new dwarfs('Lazy', randomAge, "<img src='3.jpg'>");
+        dwarf[3] = new dwarfs('Dopey', randomAge, "<img src='4.jpg'>");
+        dwarf[4] = new dwarfs('Dwarfy', randomAge, "<img src='5.jpg'>");
+        
+        var highestAge1 = Math.max(dwarf[0].randomAge, dwarf[1].randomAge, dwarf[2].randomAge, dwarf[3].randomAge, dwarf[4].randomAge);
+       
+        
+        for(var i=0; i<dwarf.length; i++) {
+            
+            var age = dwarf[i].randomAge;
+        
+            if (highestAge = dwarf[i].dwarfAge) {
+            document.getElementById('demo').innerHTML="The oldest dwarf is " + dwarf[i].dwarfName + " and he is " + dwarf[i].dwarfAge + " years old." + "<br><br>" + dwarf[i].dwarfImg;
+            } else {
+            document.getElementById('demo1').innerHTML= dwarf[i].dwarfName + " " + dwarf[i].dwarfAge;
+            }
+        }
+                
+        
+       
+        
+        
+       
+    
+        
+    </script>
+    </body>
+</html>

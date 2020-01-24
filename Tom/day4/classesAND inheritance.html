@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <title>
+            JavaScript
+        </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width-device-width, initial-scale-1">
+    </head>
+    <body>
+        <h1>Classes and Inheritance in JS</h1>
+        <div id='enrolled'></div>
+        <div id='pathway'></div>
+
+        <script>
+       
+        class learner {
+            
+        //    var fname, lname, age, gender;
+            
+            constructor(fname, lname, age, gender ) 
+            {
+                this.fname=fname;
+                this.lname=lname;
+                this.age=age;
+                this.gender=gender;
+            }
+            /////FUNCTION ////////////
+            enroll() {
+                document.getElementById('enrolled').innerHTML = this.fname + " is enrolled.";
+            }
+        }
+        var johnny = new learner("Johnny", "B'Goode", 15, 'Male');
+           
+            
+            
+        ///////STATIC FUNCTION/////////////////////////////
+//        static countLearners() {
+//            document.getElementById('all').innerHTML = "There are 33 learners enrolled.";
+//        }  
+//        var johnny = new learner("Johnny", "B'Goode", 15, 'Male')
+//        johnny.enroll();
+//        //calling a static method
+//            learner.counterLearners();
+//            
+            
+            ///////////INHERITANCE -------
+    class pathway extends learner 
+            {
+                constructor(fname, lname, age, gender, Lpathway)
+                {
+                    super(fname, lname, age, gender);
+                    this.learnerPathway = Lpathway;
+                }
+                choosePathway() {
+                    document.getElementById('pathway').innerHTML=this.fname+" has selected " +this.learnerPathway+ " pathway.";
+                }
+            }
+    //---------create object of the extended class ----
+    var learner1 = new pathway('Max', 'Power',25, 'Male', 'ISE');
+    learner1.choosePathway();
+    learner1.enroll();
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        </script>
+    </body>
+</html>

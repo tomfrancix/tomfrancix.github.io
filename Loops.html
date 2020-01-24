@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>
+        Time
+    </title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <h1> For While and Do-While Loops</h1>
+
+    <h3> Choose a loop</h3>
+    <div id="forloop"> </div>
+    <h3> Do-While loop</h3>
+    <div id="doloop"> </div>
+    
+    <h3> Do-While loop</h3>
+    <div id="whileloop"> </div>
+    
+    <script>    
+    for(var i=0;i<10;i++)
+        {       document.getElementById('forloop').innerHTML+=i +"<br>";    
+        }
+     
+    var i=1;    
+    do{       document.getElementById('doloop').innerHTML+=i +"<br>";    
+         i++;
+        }while(i<=10);
+       
+    var i=1;
+        while(i<=11)
+        {
+        document.getElementById('whileloop').innerHTML+=i +"<br>";    
+         i++;   
+        }
+        
+        
+    </script>
+</body>
+</html> 

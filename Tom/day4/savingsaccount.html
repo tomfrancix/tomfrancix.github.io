@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <title>Savings Web Application</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width-device-width initial-scale-1">
+        <style>
+            p {
+                display:inline;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Savings Account</h1>
+        </header>
+            <br>
+            
+            <p>Account Holder: Alex</p> <br>
+            
+            <p>Account Balance: £</p><span id="balance">0</span>.
+            
+            <br> <br>
+            <p>Transaction Type:</p> 
+            
+            <select type="select" id="transactionType">
+                <option value="Please Select...">Please Select</option>
+                <option value="Withdraw">Withdraw</option>
+                <option value="Deposit">Deposit</option>
+            </select> <br> <br>
+            
+            <p>Amount: £</p><input type="number" id="amount"> <br> <br>
+            
+            <div id="corrector"></div>
+            
+            <input type="button" value="Complete Transaction" name="submit" onclick="transact() ">
+            
+    <script>
+        balance.value = 0;
+        function transact() {
+            var type = document.getElementById('transactionType').value;
+            var amount = document.getElementById('amount').value;
+            var balance = document.getElementById('balance');
+            var amount = parseInt(amount);
+            
+            if (type === "Withdraw") {
+                alert(amount);
+                balance.value -= amount;
+                balance.innerHTML = balance.value;
+                
+            } else if (type === "Deposit") {
+                alert(amount);
+                balance.value += amount;
+                balance.innerHTML = balance.value;
+                
+            } else {
+                document.getElementById('corrector').innerHTML = "You must enter a valid amount."
+            }
+        }
+        
+        
+        
+    </script>
+    </body>
+</html>

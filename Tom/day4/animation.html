@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>
+            DWARFS
+        </title>
+        <meta charset="utf-8">
+    <style>
+        body {
+            padding:10%;
+            text-align: center;
+            width:100%;
+        }
+        #prev {
+            margin-top:15%;
+            margin-left:20%;
+            z-index:0;
+            width:50px;
+            height:50px;
+            background-color:blue;
+            animation-name: box;
+            animation-duration:1000s;
+            animation-timing-function:linear;
+        }    
+        @keyframes box {
+            0% {transform: rotateX(10000deg) rotateZ(10000deg) rotateY(1000deg) translateX(400px)  translateY(200px)  translateZ(200px)}
+            100% {transform: rotateX(0deg) rotateZ(0deg) rotateY(0deg) translateX(0px) translateY(0px)  translateZ(0px)}
+        }
+/*
+        #next {
+            z-index:100;
+            width:500px;
+            height:500px;
+            background-color:blue;
+            animation-name: spin;
+            animation-duration:100s;
+            animation-timing-function:linear;
+        }    
+*/
+        @keyframes spin {
+            0% {transform: rotateZ(1000000deg)  }
+            100% {transform: rotateZ(0deg) }
+        }
+        
+    </style>
+    </head>
+    
+    <body>
+<!--
+      <div style="padding:10%; padding-top:20%; text-align: center; width:100%;
+height:100%;"></div>
+-->
+       <div STYLE="color:white;padding:10px; text-align: center" id="prev">HELLO</div>
+       <div STYLE="color:white;padding:10px; text-align: center" id="prev">HELLO</div>
+       <div STYLE="color:white;padding:10px; text-align: center" id="prev">HELLO</div>
+       <div STYLE="color:white;padding:10px; text-align: center" id="prev">HELLO</div>
+       <div STYLE="color:white;padding:10px; text-align: center" id="prev">HELLO</div>
+       <div STYLE="color:white;padding:10px; text-align: center" id="prev">HELLO</div>
+       <div STYLE="color:white;padding:10px; text-align: center" id="prev">HELLO</div>
+       <div STYLE="color:white;padding:10px; text-align: center" id="prev">HELLO</div>
+       <div STYLE="color:white;padding:10px; text-align: center" id="prev">HELLO</div>
+       
+       <div STYLE="color:white;padding:10px; text-align: center" id="prev">HELLO</div>
+      
+<!--
+        <div STYLE="background-image: url(Untitled.jpg);width:500px;height:500px;" id="next">HELLO</div>
+       
+-->
+
+    </body>
+<body>

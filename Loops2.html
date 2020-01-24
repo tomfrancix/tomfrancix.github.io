@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>
+        Time
+    </title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <h1> For While and Do-While Loops</h1>
+
+    <h3> Choose a loop</h3>
+
+	Enter the initial value of Loops: <input type="number" id="input1"> <br>
+		<input type="button" onclick="forLoop(input1.value)" value="For Loop"> 
+	<input type="button" onclick="doLoop(input1.value)" value="DoWhile Loop"> 
+	<input type="button" onclick="whileLoop(input1.value)" value="While Loop"> 
+	
+    <div id="result"> </div>
+	
+	
+
+	
+<!--
+    <h3> Do-While loop</h3>
+    <div id="doloop"> </div>
+    
+    <h3> Do-While loop</h3>
+    <div id="whileloop"> </div>
+-->
+    
+    <script>    
+    function forLoop(i)
+	{
+	document.getElementById('result').innerHTML="";
+	for(;i<10;i++)
+        {       document.getElementById('result').innerHTML+=i +"<br>";    
+        }
+     }
+	 
+    function doLoop(i)
+	{
+	document.getElementById('result').innerHTML="";
+	//var i=1;    
+    do{       document.getElementById('result').innerHTML+=i +"<br>";    
+         i++;
+        }while(i<=10);
+     }
+
+	function whileLoop(i)
+	{
+	document.getElementById('result').innerHTML="";
+    //var i=1;
+        while(i<=11)
+        {
+        document.getElementById('result').innerHTML+=i +"<br>";    
+         i++;   
+        }
+     }   
+        
+    </script>
+</body>
+</html> 
