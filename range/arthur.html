@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+   
+    <head>
+        <meta charset="utf-8">
+        <title>Christophers Plant Shop!</title>
+        <script src="~/Scripts/jquery.min.js">)"</script>
+        <script src="\scripts/draganddrop.js">"</script>
+              <script src="\bootstrap/js/jquery.min.js"></script>
+      <script src="\bootstrap/js/bootstrap.bundle.min.js"></script>
+       <script src="\bootstrap/js/bootstrap.min.js"></script>
+       <link rel="stylesheet" type="text/css" href="\bootstrap/css/bootstrap.min.css">
+       <link rel="stylesheet" href="\bootstrap/css/bootstrap.grid.min.css">
+        <link href="\style.css" rel="stylesheet" type="text/css"/>
+    </head>
+    
+    <body>
+       <header>
+        <div>
+            <a class="headerlogo" href="index.html">
+                <img src="\images/LOGOWHITE.jpg" />
+            </a>
+            <span id="headername">Christopher's Tillandsia</span>
+            <input type="search" class="searchbox" placeholder="Search our store" />
+        </div>
+        </header>
+<nav>
+           <ul>
+               <li><a href="\index.html">Home</a></li>
+               <li><a href="\products.html">Products</a></li>
+               <li><a href="\blog.html">Blog</a></li>
+               <li><a href="\checkout.html">Checkout</a></li>
+           </ul>
+       </nav>
+
+<br>
+         <div class="abc"><b>Quick Search:</b><a class="selected" href="arthur.html"> Arthur </a>-<a href="bernard.html"> Bernard </a>-<a   href="dolores.html"> Dolores </a>-<a  href="gia.html"> Gia </a>-<a href="kala.html"> Kala </a>-</div>
+    
+       <div class="rangetitle"><header class="blockheader">Arthur</header></div><br>
+           <div class="shopforside"><a href="\allplants.html">
+            <header>
+                Shop for Airplants... 
+            </header></a>
+        </div><br><br>
+        
+        <article class="productarticlewide" id="Arthur" data-price="10.00">
+            
+            <div class="leftbox">
+            <div class="row">
+  <!-- Full-width images with number text -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+   <div class="mySlides">
+    <div class="numbertext">1 / 4</div>
+      <img src="\images/arthur.jpg" style="width:320px">
+  </div>
+  <div class="mySlides">
+    <div class="numbertext">2 / 4</div>
+      <img src="\images/surfacemounted.jpg" style="width:320px">
+  </div>
+  <div class="mySlides">
+    <div class="numbertext">3 / 4</div>
+      <img src="\images/arthure.jpg" style="width:320px">
+  </div>
+  <div class="mySlides">
+    <div class="numbertext">4 / 4</div>
+      <img src="\images/arthur1.jpg" style="width:320px">
+  </div>
+  
+  
+  <!-- Next and previous buttons -->
+  
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  <!-- Image text --><br>
+  </div><br>
+  <!-- Thumbnail images -->
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="\images/arthur.jpg" style="width:80px" onclick="currentSlide(1)" alt="Come Freediving!">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="\images/surfacemounted.jpg" style="width:80px" onclick="currentSlide(2)" alt="Meet New People!">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="\images/arthure.jpg" style="width:80px" onclick="currentSlide(3)" alt="Train Locally...">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="\images/arthur1.jpg" style="width:80px" onclick="currentSlide(4)" alt="Every Week!">
+    </div>
+    
+  </div>
+</div>
+<script>var slideIndex = 1;
+showSlides(slideIndex);
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+   /* var slideIndex = 0;
+showSlides();
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}*/
+    </script>
+            <div class="rightbox">
+                <div class="saleproduct"><h1>15% OFF</h1><h4><b>ALL</b> airplants <br> purchased with <br>this display!</em></p></div>
+            </div>
+            
+            
+            
+            <!--<img id="plantimg" class="productarticlewidethumbnail" src="\images/arthurp.jpg" />
+            <div class="productarticlewidecontent">
+                <header>
+                    <span class="productarticlewidename">Arthur</span>
+                </header><br>
+                <details>
+                <summary>Signature Tillascope 'Arthur' design...</summary><p class="productarticlewidedescription">
+                <p>...featuring <a href="\tillandsia/20.html">Tillandsia ionantha</a> vanhyningii alongside <a href="\tillandsia/32.html">Tillandsia tectorum</a> and <a href="#">Tillandsia funckiana</a> in a sleek spherical terrarium suspended within the stage frame, finished with a ‘white smoke’ grey oak varnish. </p>
+                <img src="\images/arthure.jpg" width="260">
+                <img src="\images/arthur1.jpg" width="260">
+                 </details> 
+                      <h3 class="productarticlewideprice">Price: £10</h3>    
+                       <div class="addtocartbutton">
+                        Add to Cart
+                    </div>
+
+            </div>-->
+        </article>
+        <article class="productarticlewide" id="Arthur" data-price="10.00">
+            <img id="plantimg" class="productarticlewidethumbnail" src="\images/arthurp.jpg" />
+            <div class="productarticlewidecontent">
+                <header>
+                    <span class="productarticlewidename">Arthur (Display Only)</span>
+                </header><br>
+                <details>
+                <summary>Signature Tillascope 'Arthur' design...</summary><p class="productarticlewidedescription">
+                <p>...the first version from with range. </p>
+                <img src="\images/surfacemounted.jpg" width="520">
+                
+                 </details> 
+                      <h3 class="productarticlewideprice">Price: £10</h3>    
+                       <div class="addtocartbutton">
+                        Add to Cart
+                    </div>
+
+            </div>
+        </article>
+    
+    <div class="shoppingcart2" id="shoppingcart">
+            <header class="blockheader"><h2>Shopping Cart</h2></header>
+            <ul>
+                
+            </ul>
+        </div>
+            <footer>
+            <p>Our adress is <adress>24 Brighton Street, Brighton, BRG762</adress></p>
+            
+            <p class="textcontent">All site contents is copyright <a class="mainlink" href="#"></a></p>
+            <p class="smalltext">This page was generated on <time>12:03:14;03.06.2019</time></p>
+        </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", addDnDHandlers, false);</script>
+</body>
+</html>
