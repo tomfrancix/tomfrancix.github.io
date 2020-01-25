@@ -1,105 +1,176 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+   
     <head>
-        <title>
-            Time
-        </title>
         <meta charset="utf-8">
+        <title>Christophers Plant Shop!</title>
+        <script src="~/Scripts/jquery.min.js">"</script>
+        <script src="scripts/draganddrop.js">"</script>
+        <link href="style.css" rel="stylesheet" type="text/css"/>
     </head>
-    <body>
-     <br>
-      ENTER INITIAL VALUE OF LOOPS: <input type="number" id="input1"> 
-      
-      <br>
-      <br>
-      
-      ENTER END VALUE OF LOOPS: <input type="number" id="input2">
-      <br>
-      <br>
     
-      ENTER INCREMENT VALUE: <input type="number" id="input3">
-      <br>
-      <br>
-      <!-- PASS THE VALUE OF THE INPUT INTO THE FUNCTION --->
-      <button type="button" onclick="forloop(input1.value, input2.value, input3.value)">FOR LOOP</button>
-      <button type="button" onclick="dowhile(input1.value, input2.value, input3.value)">DO WHILE</button>
-      <button type="button" onclick="whileloop(input1.value, input2.value, input3.value)">WHILE</button>
-       <h1> For While and Do-While Loops</h1>
-       
-       <h3> For Loop</h3>
-       <div id="forloopjust9"></div>
-        <div id="forloop"></div>
-        <br>
+    <body><div class="page">
+       <header>
+        <div>
+            <a class="headerlogo" href="index.html">
+                <img src="images/LOGOWHITE.jpg" />
+            </a>
+            <span id="headername">Christopher's Tillandsia</span>
+            <input type="search" class="searchbox" placeholder="Search our store" />
+        </div>
+        </header>
+    
+       <nav>
+           <ul>
+               <li><a href="index.html"><div class="menulinks">Home</div></a></li>
+               <li><a href="products.html"><div class="menulinks">Products</div></a></li>
+               <li><a href="blog.html"><div class="menulinks">Blog</div></a></li>
+               <li><a href="checkout.html"><div class="menulinks">Checkout</div></a></li>
+           </ul>
+       </nav>
+<div class="container">
+       <div class="reveal"></div>
+       <!-- <div id="welcomeimage1">
+        <img src="images/banner.jpg" />
+        </div>
+        <div id="welcomeimage2">
+        <img src="images/LOGOWHITE.jpg" width:300 />
+        </div> -->
+    <aside id="events">
+            <header>Latest Updates!</header>
+            <ul>
+                <li><a href="#">New Tillandsia In Stock</a></li>
+                <li><a href="#">Interior Decoration Service Developments</a></li>
+                <li><a href="#">New Website Launched!</a></li>
+            </ul>
+        </aside>
+        <section id="welcometext">
+            <div class="sale"><h1>SALE NOW ON</h1><h4><b>15%</b> OFF</h4><p><em>for <b>ALL</b> airplants when purchased with a display!</em></p></div>
+            <header>Welcome to Christophers Plant Shop!</header>
+            <span>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in lobortis ex. Suspendisse vestibulum varius porta. Ut ligula risus, fermentum nec elit eget, feugiat consequat diam. Donec accumsan tristique convallis. Curabitur sit amet facilisis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sollicitudin augue et metus volutpat pellentesque. Maecenas dui quam, iaculis at massa in, varius varius lectus.
+            Fusce efficitur justo sed lobortis efficitur. Sed vel quam at mi tristique convallis non id justo. Vestibulum molestie odio sed congue tempor. Mauris at nisl a risus finibus efficitur. Mauris quis luctus erat, id auctor tellus. Nulla vel suscipit metus. Donec porta dapibus eros et finibus. Maecenas suscipit nisl sed dictum luctus. Proin suscipit laoreet ante a dictum. Donec ornare, erat quis dignissim maximus, neque ex laoreet massa, sed convallis turpis turpis ut elit. Suspendisse varius augue ante, sed fermentum dui facilisis non. Nulla neque leo, placerat ut tempor quis, ornare sed lorem. Mauris egestas sem non magna semper lobortis.
+            <p><mark>Note that our store is closed on Christmas eve and Christmas day.</mark></p>
+        </span>
+        <div class="shopfor"><a href="allplants.html">
+            <header class="blockheader">
+                Shop for Airplants...
+            </header></a>
+        </div>
+        <div class="shopfor"><a href="products.html">
+            <header class="blockheader">
+                Shop for Displays...
+            </header></a>
+        </div>
+        </section>
         
-        <h3> Do-While</h3>
-        <div id="dowhile"></div>
         
-        <h3> While Loop</h3>
-        <div id="whileloop"></div>
-       
-       <script>
-           
-// asigns 0 first, 1, 2, 3... up to 9....
-//            for(var i=0; i<10; i++)
-//                {
-//                    document.getElementById('forloopjust9').innerHTML = i;
-//                }
-//        // How can we get all the values?  ADD ( x = x + y ) OR ( x += y )
-//        // if the ~~~innerHTML is made equal to i, previous numbers will be lost.
-//        // if the ~~~innerHTML is added to i and then made equal to ~~~innerHTML, info is preserved.
-//            for(var i=0; i<10; i++)
-//                {
-//                     document.getElementById('forloop').innerHTML = document.getElementById('forloop').innerHTML + i;
-//                }
-//            // for space; and simplify to x+=y instead of x=x+y;
-//            for(var i=0; i<10; i++)
-//                {
-//                    document.getElementById('forloop').innerHTML += i + " ";
-//                }
- //for new line; add <br>-------- INSERT i INTO FUNCTION PARAMETER. i INITIALISES WITH THE INPUT VALUE THATS SENT!
-           // you must declare first parameter as i=i or just ';'  ------
-        function forloop(i, x, a) {
-            
-            a = parseInt(a);
-            i = parseInt(i);
-            
-           for(; i<x; i+=a)
-                {
-                    document.getElementById('forloop').innerHTML += i + "<br>";
-                }
-        }
-//DO LOOP ----------GOOD WHEN CONDITION IS DEPENDANT ON USER INPUT--------------
-           //----- INSERT i INTO FUNCTION PARAMETER. i INITIALISES WITH THE INPUT VALUE THATS SENT!
-        function dowhile(i, x, a) {
-           a = parseInt(a);
-            i = parseInt(i);
-           //you must remove the i=0 initialiser.
-           do {
-                document.getElementById('dowhile').innerHTML += i + " "; 
-               i+=a ;
-            } while(i<=x);
-        }
-        //WHILE LOOP -----------------------;
-           //WHIOLE
-           ///only outputs 11 because the initial value is not here.
-//           while(i<=11) { 
-//               document.getElementById('whileloop').innerHTML += i;
-//               i++;
-//           }
-//INITIALISE THE VARIABLE WITH var i = 1;
-//----- INSERT i INTO FUNCTION PARAMETER. i INITIALISES WITH THE INPUT VALUE THATS SENT!
-        function whileloop(i, x, a) {
-            
-            a = parseInt(a);
-            i = parseInt(i);
-            //you must remove the i=0 initialiser. 
-            console.log(a);
-           while(i<=x) { 
-               document.getElementById('whileloop').innerHTML += i;
-               i+=a;
-           }
-        }
-        </script>
         
-    </body>
+        <section id="bestsellers">
+            <header>Bestsellers @ Christophers Plant Shop</header>
+            <section class="Tillandsiabestsellers">
+                <header>Tillandsia</header>
+                <article class="productarticle " id=Xerographica data-price="14.99">
+                    
+<figure>
+                        <img class="productarticlethumbnail" src="images/xero.jpg" />
+                    </figure>
+                    <header>
+                        <span class="productarticlename tooltip"><div class="tooltip">
+                            <span class="tooltiptext"><h2>15% OFF</h2><h4>when purchased <br>with a <a href="displays.html">display!</a></h4></span><a href="tillandsia/34.html">Xerographica</a></div></span>
+                    </header>
+                    <p class="productarticleprice">£14.99</p>
+                    <div class="addtocartbutton" id="myaddtocartbutton">
+                        Add to Cart
+                    </div>
+                </article>
+                <article class="productarticle" id=Ionantha data-price="14.99">
+                    <figure>
+                        <img class="productarticlethumbnail" src="images/ionantha.jpg" width=100 />
+                    </figure>
+                    <header>
+                        <span class="productarticlename tooltip"><div class="tooltip">
+                            <span class="tooltiptext"><h2>15% OFF</h2><h4>when purchased <br>with a <a href="displays.html">display!</a></h4></span><a href="tillandsia/20.html">Ionantha</a></div></span>
+                    </header>
+                    <p class="productarticleprice">£14.99</p>
+                    <div class="addtocartbutton">
+                        Add to Cart
+                    </div>
+                </article>
+                <article class="productarticle"  id=Tectorum Snow data-price="14.99">
+                    <figure>
+                        <img class="productarticlethumbnail" src="images/tectorum.png" width=100 />
+                    </figure>
+                    <header>
+                        <span class="productarticlename tooltip"><div class="tooltip">
+                            <span class="tooltiptext"><h2>15% OFF</h2><h4>when purchased <br>with a <a href="displays.html">display!</a></h4></span><a href="tillandsia/32.html">Tectorum Snow</a></div></span>
+                    </header>
+                    <p class="productarticleprice">£14.99</p>
+                    <div class="addtocartbutton">
+                        Add to Cart
+                    </div>
+                </article>
+               
+            </section>
+            <section class="displaysbestsellers">
+                <header>Displays</header>
+                <article class="productarticle" id=Maria data-price="14.99">
+                    <figure>
+                        <img class="productarticlethumbnail" src="images/Maria.jpg" width=100 />
+                    </figure>
+                    <header>
+                        <span class="productarticlename tooltip"><div class="tooltip">
+                            <span class="tooltiptext"><h2>15% OFF</h2><h4> all airplants purchased <br>with a <a href="displays.html">display!</a></h4></span><a href="range/maria.html">Maria</a></div></span>
+                    </header>
+                    <p class="productarticleprice">£24.99</p>
+                    <div class="addtocartbutton">
+                        Add to Cart
+                    </div>
+                </article>
+                <article class="productarticle" id=Arthur data-price="14.99">                    <figure>
+                        <img class="productarticlethumbnail" src="images/Arthur.jpg" width=100 />
+                    </figure>
+                    <header>
+                        <span class="productarticlename tooltip"><div class="tooltip">
+                            <span class="tooltiptext"><h2>15% OFF</h2><h4> all airplants purchased <br>with a <a href="displays.html">display!</a></h4></span><a href="range/arthur.html">Arthur</a></div></span>
+                    </header>
+                    <p class="productarticleprice">£54.99</p>
+                    <div class="addtocartbutton">
+                        Add to Cart
+                    </div>
+                </article>
+                <article class="productarticle" id=Bernard data-price="14.99">
+                    <figure>
+                        <img class="productarticlethumbnail" src="images/Bernard.jpg" width=100 />
+                    </figure>
+                    <header>
+                        <span class="productarticlename tooltip"><div class="tooltip">
+                            <span class="tooltiptext"><h2>15% OFF</h2><h4> all airplants purchased <br>with a <a href="displays.html">display!</a></h4></span><a href="range/bernard.html">Bernard</a></div></span>
+                    </header>
+                    <p class="productarticleprice">£19.99</p>
+                    <div class="addtocartbutton">
+                        Add to Cart
+                    </div>
+                </article>
+            </section>
+        </section>
+        <div class="shoppingcartt" id="shoppingcart">
+            <header class="blockheader"><h2>Shopping Cart</h2></header>
+            <ul>
+                
+            </ul>
+        </div>
+        <footer>
+            <p>Our adress is <adress>24 Brighton Street, Brighton, BRG762</adress></p>
+            
+            <p class="textcontent">All site contents is copyright <a class="mainlink" href="#"></a></p>
+            <p class="smalltext">This page was generated on <time>12:03:14;03.06.2019</time></p>
+        </footer>
+        <script src="scripts/script.js"></script>
+   </div></div>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", addDnDHandlers, false);</script>
+     </body>
+    
 </html>
