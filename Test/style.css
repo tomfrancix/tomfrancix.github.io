@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 body, section, aside, div, article, header, footer {
-  border:1px solid rgba(0,0,0,0);
+  
     box-sizing: border-box;
 }
 body {
@@ -62,6 +62,7 @@ a {
     background-color:white;
     background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%);
     animation:floatin 3s;
+    padding:15px;
     animation-timing-function:ease-in-out;
 }
 @keyframes floatin {
@@ -478,6 +479,52 @@ textarea {
 #thomaslink {
     display:none;
 }
+@media only screen and (max-width: 1097px) {
+    #qualifications {
+        height:auto;
+        width:100vw;
+        margin:0;
+        padding:0;
+    }
+    .qual-flex {
+        width:100vw;
+        height:auto;
+        flex-direction: column;
+        margin:0;
+        padding:0;
+    }
+    .qualification {
+        width:100%;
+        height:auto;
+        padding-bottom:20px;
+    }
+    .page4-wrapper {
+        width:100vw;
+        height:auto;
+        background-repeat:repeat-y;
+        background-position:center;
+    }
+    .container {
+        height:auto;
+    }
+#experience {
+        height:auto;
+    }
+    #experience-flex {
+        flex-direction: column;
+        height:auto;
+    }
+    #skills {
+        width:100vw;
+        height:auto;
+        overflow:scroll;
+    }
+    table {
+        100vw;
+        overflow:scroll;
+    }
+}
+    
 @media only screen and (max-width: 600px) {
   body {
     width:100vw;
@@ -503,33 +550,42 @@ textarea {
     #quicklinks-box {
       flex-direction:column;
         height:auto;
+        padding:0;
     }
     .quicklink {
         width:84vw;
         height:auto;
     }
+    #home {
+        min-height:100vh;
+    }
     .page1-wrapper {
         height:auto;
         background-repeat:repeat;
         background-position:center;
-        min-height: 200vh;
+        background-size:initial;
+        padding-bottom:20px;
+        overflow:hidden;
     }
     .page2-wrapper {
         height:auto;
         background-repeat:repeat;
         background-position:center;
-        min-height: 200vh;
+        padding-bottom:20px;
     }
     .page4-wrapper {
         width:100vw;
-        height:auto;
-        background-repeat:repeat-y;
-        background-position:center;
+        height:200vh;
+        background-repeat:repeat;
+       
     }
     .container {
         height:auto;
     }
     .open-page {
+        height:auto;
+    }
+    .contact-page {
         height:auto;
     }
     .container-fluid {
@@ -548,6 +604,7 @@ textarea {
         width:100vw;
         height:auto;
         overflow:scroll;
+        padding:1px;
     }
     table {
         100vw;
@@ -571,7 +628,7 @@ textarea {
         padding-bottom:20px;
     }
     #contact {
-        height:auto;
+/* HEIGHT OF THIS BACKGROUND IS ONLY CONTROLLED BY PAGE4-WRAPPER */
     }
     .contact-form {
         width:95vw;
@@ -612,32 +669,78 @@ textarea {
         color: white;
         margin-bottom:10px;
 }
-    .find-us {
-        width:95vw;
-        margin:0 auto;
-        flex-direction:column;
-        padding:0;
-        padding-top:20px;
-        display:block;
-        float:none;
-    }
-    .info-flex {
-        width:100%;
-    }
-    .information-contact {
-        width:100%;
-    }
+    
     .map-flex {
         width:100%;
         margin:0;
     }
+    .contact-form {
+        height:auto;
+    }
+    .contact-page {
+        height:auto;
+        flex-direction: column;
+    }
+    .find-us {
+        flex-direction: column;
+        width:100%;
+        height:auto;
+        padding:0;
+        margin:0;
+        padding-top:20px;
+        display:block;
+    }
+    .info-flex {
+        flex-direction: column;
+        width:100%;
+    }
     footer {
         height:auto;
-        width:100vw;
+        display:block;
+        margin:0 auto;
+        padding-top:20px;
     }
     #footer {
+        display:block;
+        height:auto;
+        margin:0 auto;
+        padding-top:20px;
+    }
+    .portfolio-flex {
+        flex-direction:column;
+        height:auto;
+        padding:10px;
+    }
+    
+    aside#aside {
+        width:100%;
+        margin:0 auto;
+        padding:10px;
+        line-height:25px;
+        height:auto;
+        border:1px solid white;
+        border-radius:10px;
+        background-color:rgba(0,0,0,0.7);
+        color:white;
+        text-shadow: none;
+        letter-spacing: 2px;
+    }
+    #portfolio {
         height:auto;
     }
+    .page2-wrapper {
+        height:auto;
+    }
+    .project-view {
+         width:100%;
+        line-height:50px;
+        font-weight:normal;
+        background-color:rgb(138,28,26);
+        border:1px dashed white;
+        
+    }
+    
+   
     
     
 }
