@@ -4,8 +4,8 @@ body, section, aside, div, article, header, footer {
     box-sizing: border-box;
 }
 html {
-margin:0;
-padding:0;
+    margin:0;
+    padding:0;
 }
 body {
     margin:0;
@@ -20,7 +20,8 @@ body {
     width:100vw;
     height:100vh;
     background-image:url(background.jpg);
-    background-repeat: repeat-x;
+    background-repeat: repeat-y;
+    background-position:50% 100%;;
     background-size: cover;
     text-shadow: -3px 3px #666666;
     color:rgb(180,180,110);
@@ -212,6 +213,96 @@ div.topnav {
 }
 #__bs_notify__ {
   display: none !important;
+}
+/*---EXPERIENCE----------------------------------------------------------------*/
+aside#aside {
+        width:20%;
+        float:left;
+        padding:10px;
+        line-height:25px;
+        height:auto;
+        border:1px solid white;
+        border-radius:10px;
+        background-color:rgba(0,0,0,0.7);
+        color:white;
+        text-shadow: none;
+        letter-spacing: 2px;
+    }
+.portfolio-flex {
+        flex-direction:row;
+        height:80vh;
+        padding:10px;
+    }
+#portfolio {
+        height:100vh;;
+    }
+    .page2-wrapper {
+        height:auto;
+    }
+    .project-view {
+         width:100%;
+        line-height:50px;
+        font-weight:normal;
+        background-color:rgb(138,28,26);
+        border:1px dashed white;
+        border-radius:10px;
+        transition:line-height 0.5s, background-color 0.5s, font-weight 0.6s;
+    }
+.project-view:hover {
+    line-height:70px;
+    font-weight:bold;
+    background-color:deepskyblue;
+}
+#project-one {
+    display:none;
+}
+#project-two {
+    display:none;
+}
+#project-three {
+    display:none;
+}
+#project-four {
+    display:none;
+}
+#home-links {
+    width:100%;
+    padding:10px;
+    display:flex;
+    flex-direction:column;
+}
+.home-link {
+    width:80%;
+    padding:15px;
+    margin:0 auto;
+    margin-top:15px;
+    border:1px dashed white;
+    border-radius:10px;
+    background-color:deepskyblue;
+    color:black;
+    font-weight:bold;
+    transition: width 0.5s, color 0.2s, background-color 0.5s;
+}
+
+.home-link:hover {
+    width:100%;
+    color:white;
+    background-color:rgb(28,158,26);
+}
+.home-text {
+    letter-spacing:4px;
+    text-shadow:none;
+    line-height:30px;
+    font-size:115%;
+}
+#port-link {
+    color:rgb(148,45,66);
+    padding:20px;
+    transition:color 0.5s, font-size 0.5s;
+}
+#port-link:hover {
+    color:deepskyblue;
+    font-size:120%;
 }
 /*---EXPERIENCE----------------------------------------------------------------*/
 #experience-flex {
@@ -553,12 +644,13 @@ textarea {
   .form-group input[type="email"] {
       max-width: 100%;}
     #quicklinks-box {
+        width:100%;
       flex-direction:column;
         height:auto;
         padding:0;
     }
     .quicklink {
-        width:84vw;
+        width:90%;
         height:auto;
     }
     #home {
@@ -566,16 +658,13 @@ textarea {
     }
     .page1-wrapper {
         height:auto;
-        background-repeat:repeat;
-        background-position:center;
-        background-size:initial;
-        padding-bottom:20px;
-        overflow:hidden;
+        padding:10px;
+        background-repeat:repeat-y;
     }
     .page2-wrapper {
         height:auto;
         background-repeat:repeat;
-        background-position:center;
+        background-position:bottom;
         padding-bottom:20px;
     }
     .page4-wrapper {

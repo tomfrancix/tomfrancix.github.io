@@ -74,25 +74,36 @@
                     <div id="portfolio-intro">
                         <p>Below I have listed all my most recent projects. Click on any of them to explore their unique features and read the client testimonials.</p>
                         <hr><br>
-                        <div class="button project-view">
+                        <button type="button" class="button project-view" onclick="topOption(1)">
                             TILLASCOPE
-                        </div> 
+                        </button> 
                         <br>
-                        <div class="button project-view">
+                        <button type="button"  class="button project-view" onclick="topOption(2)">
                             CHRISTOPHERS TILLYS
-                        </div>  
+                        </button>  
                         <br>
-                        <div class="button project-view">
+                        <button type="button"  class="button project-view" onclick="topOption(3)">
                             FREEDIVE WEXFORD
-                        </div> 
+                        </button> 
                         <br> 
-                        <div class="button project-view">
+                        <button type="button"  class="button project-view" onclick="topOption(4)">
                             VORTEX
-                        </div> <br>
+                        </button> <br>
                     </div>
                 </aside>
                 <article class="project-container">
-                    
+                    <div id="project-one">
+                        P 1
+                    </div>
+                    <div id="project-two">
+                        P 2
+                    </div>
+                    <div id="project-three">
+                        P 3
+                    </div>
+                    <div id="project-four">
+                        P 4
+                    </div>
                 </article>  
             </div>
            
@@ -394,6 +405,48 @@
             x.className = "topnav";
           }
         }
+        </script>
+        <script>
+            function topOption(i) {
+                var project_one = document.getElementById("project_one");
+                var project_two = document.getElementById("project_two");
+                var project_three = document.getElementById("project_three");
+                var project_four = document.getElementById("project_four");
+                
+                
+                switch(i) {
+                    case 1:
+                        project_one.style.display = 'block';
+                        project_two.style.display = 'none';
+                        project_three.style.display = 'none';
+                        project_four.style.display = 'none';
+                        project_five.style.display = 'none';
+                        break;
+                    case 2:
+                        project_one.style.display = 'none';
+                        project_two.style.display = 'block';
+                        project_three.style.display = 'none';
+                        project_four.style.display = 'none';
+                        project_five.style.display = 'none';
+                        break;
+                    case 3:
+                        project_one.style.display = 'none';
+                        project_two.style.display = 'none';
+                        project_three.style.display = 'block';
+                        project_four.style.display = 'none';
+                        project_five.style.display = 'none';
+                        break;
+                    case 4:
+                        project_one.style.display = 'none';
+                        project_two.style.display = 'none';
+                        project_three.style.display = 'none';
+                        project_four.style.display = 'block';
+                        project_five.style.display = 'none';
+                        break;
+                    
+                        
+                }
+            }
         </script>
         <script src="javascripts/show-on-scroll.js"></script>
     </body>

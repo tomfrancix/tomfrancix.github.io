@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MONEY MANAGER</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <header>
+            <div class="raining">
+                <video loop muted autoplay class="raining_video">
+                    
+                    <source src="rain.mp4" type="video/mp4">
+                    
+                </video>
+            </div>
+            <div class="display">
+                <p style="display:block; float:none; text-align: center;">AVAILABLE FUNDS:</p>
+                <h1 style="display:block;FONT-SIZE:350%;MARGIN:20PX;" class="budget__value">+ 0.00</h1>
+                <div id="income">
+                    <h4>INCOME</h4><p>+0.00</p>
+                </div>
+                <div id="expenses">
+                    <h4>EXPENSES</h4><p>+0.00</p>
+                </div>
+            </div>
+        </header>
+        <div class="row add">
+           <div id="transactions" class="add-container">
+           
+            <select class="float add-type">
+                <option value="income" selected>INCOME</option>
+                <option value="expense">EXPENSE</option>
+            </select>
+            
+            <input class="float add-description" type="text" id="description" placeholder="Transaction Description">
+            
+            <input class="float add-value" type="number" id="amount" placeholder="Value">
+              
+               <button class="float add-button" id="submit" type="submit" name="submit" value="SUBMIT">SUBMIT</button>
+               
+            </div>
+        </div>
+        
+        <div class="container">
+            <div id="income-list">
+                <table>
+                    <tr>
+                        <th class="left" style="color:chartreuse;">INCOME</th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <td class="left">Website Project</td>
+                        <td class="righta">+2,500.00</td>
+                    </tr>
+                    <tr>
+                        <td class="left">Website Project</td>
+                        <td class="righta">+2,500.00</td>
+                    </tr>
+                    <tr>
+                        <td class="left">Website Project</td>
+                        <td class="righta">+2,500.00</td>
+                    </tr>
+                    <tr>
+                        <td class="left">Website Project</td>
+                        <td class="righta">+2,500.00</td>
+                    </tr>
+                    <tr>
+                        <td class="left">Website Project</td>
+                        <td class="righta">+2,500.00</td>
+                    </tr>
+                </table>
+            </div>
+            <div id="expense-list">
+                <table>
+                    <tr>
+                        <th class="left" style="color:indianred">EXPENSES</th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <td class="left">Website Project</td>
+                        <td class="rightb">+2,500.00</td>
+                    </tr>
+                    <tr>
+                        <td class="left">Website Project</td>
+                        <td class="rightb">+2,500.00</td>
+                    </tr>
+                    <tr>
+                        <td class="left">Website Project</td>
+                        <td class="rightb">+2,500.00</td>
+                    </tr>
+                    <tr>
+                        <td class="left">Website Project</td>
+                        <td class="rightb">+2,500.00</td>
+                    </tr>
+                    <tr>
+                        <td class="left">Website Project</td>
+                        <td class="rightb">+2,500.00</td>
+                    </tr>
+                    <tr>
+                        <td class="left">Website Project</td>
+                        <td class="rightb">+2,500.00</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
