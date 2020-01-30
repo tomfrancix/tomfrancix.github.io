@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+body, section, aside, div, article, header, footer {
+  
+    box-sizing: border-box;
+}
+html {
+    margin:0;
+    padding:0;
+    width:100vw;
+}
+body {
+    background-color:black;
+    width:100vw;
+    height:100vh;
+    overflow:hidden;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 5px;
+    color:white;
+    padding:0;
+}
+header {
+    height:350px;
+    width:100%;
+}
+h4, p {
+    display:inline;
+}
+h4 {
+    float:left;
+    margin:17px;
+}
+p {
+    float:right;
+}
+.display {
+    width:35%;
+    text-align: center;
+    margin:0 auto;
+    padding:30px;
+}
+#income {
+    width:100%;
+    height:70px;
+    background-color:rgb(0,140,0);
+    padding:10px;
+    margin:10px;
+    border-radius:20px;
+}
+#expenses {
+    width:100%;
+    height:70px;
+    background-color:red;
+    padding:10px;
+    margin:10px;
+    margin-top:20px;
+    border-radius:20px;
+}
+.dissapear {
+    display:none;
+}
+.row {
+    width:96%;
+    height:auto;
+    padding:0px;
+    margin:0;
+    display:flex;
+    flex-direction:row;
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%);
+    color:black;
+}
+#transactions {
+    width:70%;
+    margin:0 auto;
+}
+@media only screen and (max-width: 1211px) {
+    #transactions {
+        width:100%;
+    }
+}
+
+button {
+    color:white;
+    float:left;
+    height:50px;
+    margin-bottom: 0;
+}
+select {
+    padding:10px;
+    background-color:black;
+    color:chartreuse;
+    border-radius:10px;
+}
+.float {
+    float:left;
+    margin-left:20px;
+}
+#description {
+    padding:10px;
+    width:50%;
+    border-radius:10px;
+    color:chartreuse;
+    background-color:black;
+}
+#amount {
+    padding:10px;
+    width:10%;
+    border-radius:10px;
+    color:chartreuse;
+    background-color:black;
+}
+::placeholder {
+    color:chartreuse;
+}
+#listincome {
+   
+
+}
+#submit {
+    width:100px;
+    height:100%;
+    padding:10px;
+    background-color:green;
+    font-weight:bold;
+    color:white;
+    border-radius:10px;
+}
+.container {
+    width:60vw;
+    margin:0 auto;
+    background-color:rgba(0,0,0,1);
+    z-index:100;
+    display:flex;
+    flex-direction:row;
+}
+#income-list {
+    width:50%;
+    float:left;
+    
+}
+#expense-list {
+    width:50%;
+    float:left;
+}
+table {
+    width:90%;
+    padding:10px;
+    border-collapse: collapse;
+}
+td {
+    padding:10px;
+}
+th {
+    padding:15px;
+    text-align: left;
+}
+table tr {
+    border-top:1px solid rgba(255,255,255,0.5);
+}
+.left {
+    width:70%;
+    letter-spacing: normal;
+}
+.righta {
+    width:30%;
+    text-align: right;
+    letter-spacing: normal; 
+    color:chartreuse;
+}
+.rightb {
+    15%;
+    letter-spacing: normal; 
+    color:indianred;
+}
+.raining {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 350px;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+}
+
+.raining__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 50vh;
+}
+@media (min-aspect-ratio: 16/9) {
+  .raining__video {
+    width: 100vw;
+    height: auto;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .raining__video {
+    width: auto;
+    height: 50vh;
+  }
+}
+@media only screen and (max-width: 960px) {
+    .display {
+        width:50%;
+    }
+    .container {
+        width:100vw;
+    }
+    .row {
+        height:auto;
+    }
+    
+    #submit {
+        display:block;
+        height:50px;
+        float:none;
+        margin:0 auto;
+        width:95%;
+    }
+    select {
+        margin:7px;
+    }
+    #description {
+        margin:7px;
+    }
+    #amount {
+        margin:7px;
+    }
+    
+}
+@media only screen and (max-width: 630px) {
+    body {
+        overflow-y: scroll;
+        box-sizing:border-box;
+    }
+    .dissapear {
+    display:block;
+}
+    #expenses {
+        margin:0;
+        box-sizing:border-box;
+    }
+    #income {
+        margin:0;
+        margin-bottom:20px;
+        box-sizing:border-box;
+    }
+    .display {
+        width:100vw;
+        box-sizing:border-box;
+    }
+    .row {
+        height:auto;
+        box-sizing:border-box;
+    }
+    .float {
+        margin:0;
+        margin-bottom:10px;
+        width:100%;
+        float:none;
+        box-sizing:border-box;
+    }
+    
+    select {
+        float:none;
+        width:360px;
+        margin:0;
+        margin-bottom:10px;
+        box-sizing:border-box;
+    }
+    #description {
+        float:none;
+        width:100%;
+        margin:0;
+        margin-bottom:10px;
+        box-sizing:border-box;
+    }
+    #submit {
+        width:100%;
+    }
+    #amount {
+        float:none;
+        width:100%;
+        margin:0;
+        margin-bottom:10px;
+        box-sizing:border-box;
+    }
+    .container {
+        flex-direction: column;
+        width:100vw;
+        padding-top:20px;
+        box-sizing:border-box;
+    }
+    
+    #income-list {
+        float:none;
+        width:100%;
+        box-sizing:border-box;
+    }
+    #expense-list {
+        display:block;
+        float:none;
+        width:100%;
+        box-sizing:border-box;
+    }
+    table {
+        width:96%;
+    }
+}
