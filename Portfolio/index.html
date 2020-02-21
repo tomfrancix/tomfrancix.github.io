@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Template</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="bootstrap.css" rel="stylesheet">
+        
+        <link rel="stylesheet" type="text/css" href="style.css">
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="timeline/style.css">
+         <script src="script.js"></script>
+         
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    </head>
+<body data-spy="scroll" data-target="#myTopnav">
+<!-------NAVIGATION--------------------------->
+        <div class="navbar" id="myTopnav">
+           <ul class="nav" style="list-style: none;">
+            <li class="active"><a href="#home"><span id="homelink">HOME</span></a></li>
+           <li><a href="#portfolio">PORTFOLIO</a></li>
+           <li><a href="#experience">EXPERIENCE</a></li>
+           <li><a href="#contacter">CONTACT</a></li>
+          </ul>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+        </div>
+<!-------HOMEPAGE----------------------------->
+        <div id="home" class="page1-wrapper">
+            <div class="container open-page">
+                <div id="signature">
+                    <h1>THOMAS FAHEY</h1>
+                    <p style="opacity:0.8; margin-top:-15px; font-size:120%;">FULL-STACK DEVELOPER</p>
+                </div>
+                <br> <br>
+                <div id="profile-picture">
+                    <img src="images/profile.JPG">
+                </div>
+            </div>
+            <br>
+            <div class="container-fluid">
+                <div id="quicklinks-box">
+                    <div class="quicklink two">
+                        
+                        <div class="home-text"><br><br><br>
+                            
+                                <p>  Hey! My name is Tom.</p><br>
+                                 <p>  I am a freelance web designer.</p><br>
+                                 <a onclick="alerter();")><div class="home-link three">DOWNLOAD MY CV</div></a>
+                                  <script> function alerter(){alert("My CV will be included soon!")}</script>
+                        </div>
+                    </div>
+                    <div class="quicklink">
+                        <div class="home-text" style="text-align: center;"><br>
+                            <a href="#contacter"><div class="home-link one">NEED A WEBSITE?</div></a><br>
+                            
+                              
+                    </div>
+                    </div>
+                    <br>
+                    <div class="quicklink two">
+                        <div class="home-text"><br><br><br>
+                          
+                             <p>  Explore my website.</p><br>
+                                 <p>  Let me know what you like.</p><br>
+                                  <a href="#portfolio"><div class="home-link three">VIEW MY PORTFOLIO</div></a><br>
+                             
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+<!-------PORTFOLIO---------------------------->
+       <div style="height:xx;float:left; display:block;">
+        <div id="portfolio" class="page2-wrapper">
+           <div class="container portfolio-page show-on-scroll">
+                <div class="portfolio-title">
+                    <h1>PORTFOLIO</h1>
+                    <p style="opacity:0.6; color:black; margin-top:-20px;">RESPONIVE DESIGNS</p>
+                </div>
+            </div>
+            <div class="portfolio-flex">
+                <div id="aside">
+                    <div id="portfolio-intro">
+                        <p>Below I have listed all my most recent projects. Click on any of them to explore their unique features and read the client testimonials.</p>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="project-card">
+                                 <a href="#tab1" data-toggle="tab"><h5>Tillascope (ASP.NET) </h5></a>
+                                <img src="images/tillascope.jpg" style="width:100%">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="project-card">
+                                 <a href="#tab2" data-toggle="tab"><h5>Tillascope (PHP) </h5></a>
+                                <img src="images/tillascopephp.jpg" style="width:100%">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="project-card">
+                                 <a href="#tab3" data-toggle="tab"><h5>Vortex (PHP)</h5></a>
+                                <img src="images/vortex.jpg" style="width:100%">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="project-card">
+                                 <a href="#tab4" data-toggle="tab"><h5>Event Money Manger</h5></a>
+                                <img src="images/moneydt.jpg" style="width:100%;">
+                                </div>
+                            </div>
+                            
+                        </div>
+                        </div>
+                        <div class="tab-content">
+                        <div id="tab1"  class="tab-pane fade in active">
+                           <br>
+                            <div class="panel"><h1>TILLASCOPE (ASP.NET) </h1></div>
+                            <div class="panel-text"><p>I used ASP.NET to redesign a website i previously built with PHP.  I decided to use a smaller color palet and focus on a user friendly UI. The cart stores data in session variables but also, if the user is logged in, their cart items will be stored for later. The security features of ASP.NET allowed me to enable an option for users to have two-factor verification via my Twillio account, by email or text. Users can also log in via Facebook and have the option to change their given email or password.  </p></div>
+                            <img src="images/tillascope.jpg"  style="width:80%; margin-bottom:10px;">
+                             <div class="panel" style=" font-size: 16px;padding-top:15px;"><p>The database I created from the information I requested from the client has become quite extensive over time. There are hundreds of products each with their own properties, attributes, pictures, discounts, associations with other products and categories and groupings. Why not check it out?</p></div>
+                            <img src="tillascope2.jpg" style="width:80%;">
+                            <a href="#portfolio" style="text-decoration: none;"><div id="backtotop"><h3 style="">BACK TO PROJECTS</h3></div></a>
+                        </div>
+                        <div id="tab2" class="tab-pane fade">
+                           <br>
+                            <div class="panel"><h1>TILLASCOPE (PHP) </h1></div>
+                            <div class="panel-text"><p>I designed this website for a friend of mine using PHP for the back end programming. This website features a unique colorful layout and two methods of navigation. A user can navigate from the top down by following a interactive guide towards their favourite product. Alteratively, they can browse through a filterable list. After selecting a display they can customise their choice of tillandsia, add it to the card and pay with PayPal! </p></div>
+                            <img src="images/tillascopephp.jpg"  style="width:80%;">
+                            <a href="#portfolio" style="text-decoration: none;"><div id="backtotop"><h3 style="">BACK TO PROJECTS</h3></div></a>
+                          
+                        </div>
+                        <div id="tab3" class="tab-pane fade">
+                           <br>
+                            <div class="panel"><h1>VORTEX</h1></div>
+                            <div class="panel-text"><p>Vortex is a social media platform that brings together people who love to post status's and photographs, write blogs and travel diaries, read news stories and engage in forum discussions. Vortex has it all layed out in discreet sections.  </p></div>
+                            <img src="vortex2.jpg"  style="width:80%;margin-bottom:10px;">
+                              <div class="panel" style=" font-size: 16px;padding-top:20px;"><p> Every user must first register an account and log in before building their profile and sharing content.  </p></div>
+                            <img src="vortex3.jpg"  style="width:80%;margin-bottom:10px;">
+                             <div class="panel" style=" font-size: 16px;padding-top:20px;"><p> Users can share different types of content in different areas of the website. The Stream displays all types of content in the order that it was shared. Several API's provide live feeds for statistics updates and general news reports. Sounds like a cool place if you ask me...  </p></div>
+                            <img src="vortex.jpg" style="width:80%;">
+                            <a href="#portfolio" style="text-decoration: none;"><div id="backtotop"><h3 style="">BACK TO PROJECTS</h3></div></a>
+                        </div>
+                        <div id="tab4" class="tab-pane fade">
+                           <br>
+                            <div class="panel"><h1>MONEY MANAGER</h1></div>
+                            <div class="panel-text"><p>This is a web application that is featured in one of my website. Keep track of project budgets by entering incoming and outgoing payments. </p></div>
+                            <img src="images/moneydt.jpg" style="width:80%;margin-bottom:10px;">
+                            <div class="panel" style=" font-size: 16px;padding-top:15px;"><p>This website is also responsive and the live moving background looks great on a desktop.</p></div>
+                            <img src="images/moneydt.jpg" style="width:80%;margin-bottom:10px;">
+                            <a href="#portfolio" style="text-decoration: none;"><div id="backtotop"><h3 style="">BACK TO PROJECTS</h3></div></a>
+                        </div>
+                        </div>
+<!--
+                    
+-->
+                    
+                </div>
+            </div>
+        </div>  </div>
+        
+<!-------EXPERIENCE---------------------------->
+       <div style="height:auto;float:left; display:block;">
+        <div id="experience" class="page3-wrapper">
+           <div class="container portfolio-page show-on-scroll">
+                <div class="experience-title">
+                    <h1>EXPERIENCE</h1>
+                    <p style="opacity:0.6; color:black; padding-bottom: 10px; margin-top:-15px;">WORK AND INTERESTS</p>
+                </div>
+            </div>
+            <br>
+
+        <div class="container" style="letter-spacing: 2.5px; line-height: 30px;">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="main-timeline8" style="height:130vh;">
+                        <div class="timeline">
+                            <span class="timeline-icon"></span>
+                            <span class="year">2020</span>
+                            <div class="timeline-content">
+                                <h3 class="title">Web Designer</h3>
+                                <p class="description">
+                                   In 2019 I started to rekindle my knowledge for programming. I had previous experience with MatLab, Python, SQL, and databases. I learned HTML, CSS, JavaScript, and PHP. In 2020, armed with these new skills, I enrolled in Just IT's Development Professional Programme. 
+                                </p>
+                            </div>
+                        </div>
+                        <div class="timeline">
+                            <span class="timeline-icon"></span>
+                            <span class="year">2019</span>
+                            <div class="timeline-content" style="text-align: center;">
+                                <h3 class="title">Site Manager</h3>
+                                <p class="description">
+                                    I took over as the site coordinator. My responsibilities expanded to providing PPE, method statements, risk assessments, quanitity surveying, ordering, collection and delivery of materials, plant hire and choosing who to work with.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="timeline">
+                            <span class="timeline-icon"></span>
+                            <span class="year">2018</span>
+                            <div class="timeline-content">
+                                <h3 class="title">Electrician</h3>
+                                <p class="description">
+                                  I am a trained Commercial Electrician and in 2018 I had a contract with the London Firebrigade. I travelled every day to any of the numerous stations all over london to carry out neccessary electrical works among various other tasks.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="timeline">
+                            <span class="timeline-icon"></span>
+                            <span class="year">2017</span>
+                            <div class="timeline-content" style="text-align: center;">
+                                <h3 class="title">Training</h3>
+                                <p class="description">
+                                    I trained as an Electrician. I completed the City and Guilds Level 2 and Level 3 diploma in electrical installation and testing. I worked for 6 months in a big mansion as a apprentice before completing the City and Guilds Level 3 Diploma in Initial Verification and Periodic Inspection of Electrical Installations.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-timeline8" style="height:125vh;margin-top:-150px">
+                        <div class="timeline">
+                            <span class="timeline-icon"></span>
+                            <span class="year">2016</span>
+                            <div class="timeline-content">
+                                <h3 class="title">Graduated From University</h3>
+                                <p class="description">
+                                   I finished University with a 2.1 in Phychology and Education with a focus on Statistics. My final dissertation was a study to measure the correlation between the Maximum Likelyhood Estimate Baysian Model and the neural multimodal sensory integration of perceptions of haptic and visual surface properties.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="timeline">
+                            <span class="timeline-icon"></span>
+                            <span class="year">2015</span>
+                            <div class="timeline-content" style="text-align: center;">
+                                <h3 class="title">Academic President and Teacher</h3>
+                                <p class="description">
+                                    I was elected as the Academic President for the school of education in the University of Southampton. I was working as a guitar teacher. I organised workshops on campus where i taught classical guitar. I have lot of good methods for learning effectively.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="timeline">
+                            <span class="timeline-icon"></span>
+                            <span class="year">2014</span>
+                            <div class="timeline-content" style="text-align: center;">
+                                <h3 class="title">Fresher in University</h3>
+                                <p class="description">
+                                   In my first year of university I was the course rep in both psychology and education lecture groups. I got involved in all issues raised by staff and students in the liason meetings. I founded the UoS Guitar Society which i later became vice-president. I organised dozens of guitarist into randomised groups in lecture halls and challenged them all to write a piece of music in an hour, to perform in the second hour. 
+                                    
+                                </p>
+                            </div>
+                        </div>
+                        <div class="timeline">
+                            <span class="timeline-icon"></span>
+                            <span class="year">2013</span>
+                            <div class="timeline-content" style="text-align: center;">
+                                <h3 class="title">Office Clerk</h3>
+                                <p class="description">
+                                    I worked for the power division in Murphy and Sons as an office clerk. I organised, fact-checked and backed up company invoices using MaxCell.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+             
+               
+           </div>
+        </div>
+<!-------CONTACT---------------------------->
+        <div id="transparentback" style="height:xx;float:left; display:block;">
+        <div id="contacter" class="page4-wrapper">
+           <div class="container contact-page show-on-scroll">
+                <div class="contact-title">
+                    <h1>CONTACT</h1>
+                    <p style="opacity:0.9; color:black; margin-top:-17px;">THOMAS FAHEY</p>
+                </div>
+            
+            <br>
+            <div class="row">
+           <div class="contact-form col-md-8">
+              <form action="https://formspree.io/meqgeegp" method="POST">
+                 <div class="panel" style="float:none; margin:0 auto;">
+                  <div class="form-group">
+                      <label>FULL NAME:</label><br>
+                      <input class="input" type="text" name="name" id="name" required="required">
+                  </div>
+                  <div class="form-group">
+                      <label>EMAIL:</label><br>
+                      <input class="input" type="email" id="email" name="_replyto" required="required">
+                  </div>
+                  </div><br>
+                  <div class="form-group panel" style="float:none; margin:0 auto;">
+                      <label>HOW DID YOU FIND ME?
+                       </label><br><br>
+                        <div class="radio-flex">
+                         <div class="input-group">
+                         <label>ONLINE</label><br>
+                          <input type="radio" id="option1" name="Discovered" value="ONLINE"></div>
+                          <div class="input-group">
+                          <label>RECOMMENDED</label><br>
+                            <input type="radio" id="option2" name="Discovered" value="RECOMMENDED"></div>
+                          <div class="input-group">
+                          <label>ADVERT</label><br>
+                          <input type="radio" id="option3"  name="Discovered" value="ADVERT"></div>
+                          </div>
+                  </div> 
+                  <br>
+                  <div class="panel" style="float:none; margin:0 auto;">
+                  <div class="form-group">
+                      <label>COMPOSE YOUR MESSAGE:</label><br><br>
+                      <textarea type="text" id="message" required="required" name="message" rows="8" cols="80"></textarea>
+                  </div>
+                  <div style="width:100%;text-align: center;">
+                  
+                  <div class="g-recaptcha" data-sitekey="6LcGAtsUAAAAAEGH2fr8GUzRtd1HbFX3tRO8_u3H"></div>
+                  </div>
+                  </div>
+                  <br>
+                  <input type="submit" value="SEND MESSAGE" id="submit-form">
+                  
+              </form>
+           
+
+            </div> </div>
+            <div class="row">
+           <div class="find-us col-md-10">
+             <div class="row" style="width:100%;margin:0 auto;float:none;">
+                 <div class="col-md-5" style="padding:0;">
+               STUDIO ADDRESS:
+               <div class="information-contact">
+                   <p>33 Morrab Gardens,<br>Seven Kings,<br> Essex,<br> IG39HG</p>
+               </div></div>
+               <div class="col-md-7">
+               EMAIL:
+               <div class="information-contact" style="padding:0;">
+                   <p>thomasfahey@mail.com</p>
+               </div>
+               MOBILE:
+               <div class="information-contact">
+                   <p>(+44) (0)7739-583-148</p>
+               </div></div><br>
+             
+              
+               <div class="col-md-12"style="margin:0;">
+               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d820.2394468392098!2d0.09734266172242018!3d51.55768869139388!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a42b5f69fe99%3A0x1a9564e98ba47d1d!2sMorrab%20Gardens%2C%20Ilford!5e1!3m2!1sen!2suk!4v1580227587634!5m2!1sen!2suk" width="100%" height="340" frameborder="0" style="border:0;" allowfullscreen=""></iframe></div>
+          </div>
+            </div>  <br>    
+            </div>  
+           </div>
+           </div>
+        </div>
+<!-------FOOTER---------------------------->
+         <div id="transparentback" style="height:auto;float:left; display:block;">
+        
+        <footer>
+            <div id="footer">
+               <br>
+                <h3><br>Website Design &copy; by Thomas Fahey </h3>
+                <br>
+                <a href="https://www.facebook.com/thomassfahey" class="fa fa-facebook" style="font-size:40px;"></a>
+                <a href="#" class="fa fa-twitter" style="font-size:40px;"></a>
+                <a href="#" class="fa fa-pinterest" style="font-size:40px;"></a>
+                <a href="https://gramho.com/profile/tomfrancix/1990875492" class="fa fa-instagram" style="font-size:40px;"></a>
+                <a href="#home"><div id="backtotop"><h3>BACK TO TOP</h3></div></a>
+            </div>
+        </footer>
+    </div>
+     
+       <script>
+$(document).ready(function(){
+  $('body').scrollspy({target: "#myTopnav"});   
+});
+</script>
+        <script>
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+        </script>
+        <script>
+            function topOption(i) {
+                var project_one = document.getElementById("project_one");
+                var project_two = document.getElementById("project_two");
+                var project_three = document.getElementById("project_three");
+                var project_four = document.getElementById("project_four");
+                
+                
+                switch(i) {
+                    case 1:
+                        project_one.style.display = 'block';
+                        project_two.style.display = 'none';
+                        project_three.style.display = 'none';
+                        project_four.style.display = 'none';
+                        break;
+                    case 2:
+                        project_one.style.display = 'none';
+                        project_two.style.display = 'block';
+                        project_three.style.display = 'none';
+                        project_four.style.display = 'none';
+                        break;
+                    case 3:
+                        project_one.style.display = 'none';
+                        project_two.style.display = 'none';
+                        project_three.style.display = 'block';
+                        project_four.style.display = 'none';
+                        break;
+                    case 4:
+                        project_one.style.display = 'none';
+                        project_two.style.display = 'none';
+                        project_three.style.display = 'none';
+                        project_four.style.display = 'block';
+                        break;
+                    
+                        
+                }
+            }
+        </script>
+        <script src="javascripts/show-on-scroll.js"></script>
+        
+    </body>
+</html>
