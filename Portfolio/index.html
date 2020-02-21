@@ -6,23 +6,22 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="bootstrap.css" rel="stylesheet">
         
-        <link rel="stylesheet" type="text/css" href="style.css">
+       
          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <link rel="stylesheet" type="text/css" href="timeline/style.css">
          <script src="script.js"></script>
-         
+          <link rel="stylesheet" type="text/css" href="style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        
     </head>
 <body data-spy="scroll" data-target="#myTopnav">
 <!-------NAVIGATION--------------------------->
         <div class="navbar" id="myTopnav">
            <ul class="nav" style="list-style: none;">
-            <li class="active"><a href="#home"><span id="homelink">HOME</span></a></li>
-           <li><a href="#portfolio">PORTFOLIO</a></li>
-           <li><a href="#experience">EXPERIENCE</a></li>
-           <li><a href="#contacter">CONTACT</a></li>
+            <li class="hider active"><a href="#home"><span id="homelink">HOME</span></a></li>
+           <li class="hider"><a href="#portfolio">PORTFOLIO</a></li>
+           <li class="hider"><a href="#experience">EXPERIENCE</a></li>
+           <li class="hider"><a href="#contacter">CONTACT</a></li>
           </ul>
           <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <i class="fa fa-bars"></i>
@@ -45,24 +44,24 @@
                 <div id="quicklinks-box">
                     <div class="quicklink two">
                         
-                        <div class="home-text"><br><br><br>
+                        <div class="home-text"><br class="hider"><br class="hider"><br>
                             
                                 <p>  Hey! My name is Tom.</p><br>
-                                 <p>  I am a freelance web designer.</p><br>
-                                 <a onclick="alerter();")><div class="home-link three">DOWNLOAD MY CV</div></a>
+                                 <p>  I am a freelance web designer.</p><br class="hider">
+                                 <a onclick="alerter();" class="hider"><div class="hider home-link three">DOWNLOAD MY CV</div></a>
                                   <script> function alerter(){alert("My CV will be included soon!")}</script>
                         </div>
                     </div>
                     <div class="quicklink">
-                        <div class="home-text" style="text-align: center;"><br>
-                            <a href="#contacter"><div class="home-link one">NEED A WEBSITE?</div></a><br>
+                        <div class="home-text" style="text-align: center;"><br class="hider">
+                            <a href="#contacter"><div class="home-link one">NEED A WEBSITE?</div></a><br class="hider">
                             
                               
                     </div>
                     </div>
-                    <br>
+                    <br class="hider">
                     <div class="quicklink two">
-                        <div class="home-text"><br><br><br>
+                        <div class="home-text"><br><br class="hider"><br class="hider">
                           
                              <p>  Explore my website.</p><br>
                                  <p>  Let me know what you like.</p><br>
@@ -124,7 +123,7 @@
                             <img src="images/tillascope.jpg"  style="width:80%; margin-bottom:10px;">
                              <div class="panel" style=" font-size: 16px;padding-top:15px;"><p>The database I created from the information I requested from the client has become quite extensive over time. There are hundreds of products each with their own properties, attributes, pictures, discounts, associations with other products and categories and groupings. Why not check it out?</p></div>
                             <img src="tillascope2.jpg" style="width:80%;">
-                            <a href="#portfolio" style="text-decoration: none;"><div id="backtotop"><h3 style="">BACK TO PROJECTS</h3></div></a>
+                            <a href="#portfolio" style="text-decoration: none;"><div id="backtotop"><h3>BACK TO PROJECTS</h3></div></a>
                         </div>
                         <div id="tab2" class="tab-pane fade">
                            <br>
@@ -177,7 +176,7 @@
         <div class="container" style="letter-spacing: 2.5px; line-height: 30px;">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="main-timeline8" style="height:130vh;">
+                    <div class="main-timeline8">
                         <div class="timeline">
                             <span class="timeline-icon"></span>
                             <span class="year">2020</span>
@@ -219,11 +218,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="main-timeline8" style="height:125vh;margin-top:-150px">
-                        <div class="timeline">
+                    <div class="main-timeline8" style="height:125vh;margin-top:-150px"><br class="hidebig">
+                        <div class="timeline"><br class="hidebig">
                             <span class="timeline-icon"></span>
                             <span class="year">2016</span>
-                            <div class="timeline-content">
+                            <div class="timeline-content" style="text-align: center;">
                                 <h3 class="title">Graduated From University</h3>
                                 <p class="description">
                                    I finished University with a 2.1 in Phychology and Education with a focus on Statistics. My final dissertation was a study to measure the correlation between the Maximum Likelyhood Estimate Baysian Model and the neural multimodal sensory integration of perceptions of haptic and visual surface properties.
@@ -272,7 +271,7 @@
            </div>
         </div>
 <!-------CONTACT---------------------------->
-        <div id="transparentback" style="height:xx;float:left; display:block;">
+        <div id="transparentback" style="float:left; display:block;">
         <div id="contacter" class="page4-wrapper">
            <div class="container contact-page show-on-scroll">
                 <div class="contact-title">
@@ -315,7 +314,7 @@
                       <label>COMPOSE YOUR MESSAGE:</label><br><br>
                       <textarea type="text" id="message" required="required" name="message" rows="8" cols="80"></textarea>
                   </div>
-                 
+                  
                   </div>
                   <br>
                   <input type="submit" value="SEND MESSAGE" id="submit-form">
