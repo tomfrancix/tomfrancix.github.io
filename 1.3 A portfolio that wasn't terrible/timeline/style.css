@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+
+
+/******************* Timeline Demo - 8 *****************/
+.main-timeline8{overflow:hidden;position:relative;height:130vh;}
+.main-timeline8:after,.main-timeline8:before{content:"";display:block;width:100%;clear:both}
+.main-timeline8:before{content:"";width:2px;height:100%;background:purple;position:absolute;top:30px;left:50%}
+.main-timeline8 .timeline{width:50%;float:left;padding-right:30px;position:relative}
+.main-timeline8 .timeline-icon{width:32px;height:32px;border-radius:50%;background:purple;border:6px solid gold;position:absolute;top:5.5%;right:-17.5px}
+.main-timeline8 .year{display:block;padding:10px;margin:0;font-size:30px;color:#fff;border-radius:10% 50px 50px 0;background:rgba(0,150,70,0.6);text-align:center;position:relative}
+.main-timeline8 .year:before{content:"";border-top:35px solid rgba(0,150,70,0.6);border-left:35px solid transparent;position:absolute;bottom:-35px;left:0}
+.main-timeline8 .timeline-content{padding:30px 20px;border:1px solid rgba(255,255,255,0.5);margin:0 45px 0 35px;background:rgba(0,0,0,0.7)}
+.main-timeline8 .title{font-size:19px;font-weight:800;color:gold;margin:0 0 10px}
+.main-timeline8 .description{font-size:16px;color:chartreuse;margin:0}
+.main-timeline8 .timeline:nth-child(2n){padding:0 0 0 30px}
+.main-timeline8 .timeline:nth-child(2n) .timeline-icon{right:auto;left:-14.5px}
+.main-timeline8 .timeline:nth-child(2n) .year{border-radius:50px 0 0 50px;background:rgba(0,150,70,0.6)}
+.main-timeline8 .timeline:nth-child(2n) .year:before{border-left:none;border-right:35px solid transparent;left:auto;right:0}
+.main-timeline8 .timeline:nth-child(2n) .timeline-content{text-align:right;margin:0 35px 0 45px}
+.main-timeline8 .timeline:nth-child(2){margin-top:170px}
+.main-timeline8 .timeline:nth-child(odd){margin:-175px 0 0}
+.main-timeline8 .timeline:nth-child(even){margin-bottom:80px}
+.main-timeline8 .timeline:first-child,.main-timeline8 .timeline:last-child:nth-child(even){margin:0}
+.main-timeline8 .timeline:nth-child(2n) .timeline-icon{border-color:gold}
+.main-timeline8 .timeline:nth-child(2n) .year:before{border-top-color:rgba(0,150,70,0.6)}
+.main-timeline8 .timeline:nth-child(3n) .timeline-icon{border-color:gold}
+.main-timeline8 .timeline:nth-child(3n) .year{background:rgba(0,150,70,0.6)}
+.main-timeline8 .timeline:nth-child(3n) .year:before{border-top-color:rgba(0,150,70,0.6)}
+.main-timeline8 .timeline:nth-child(4n) .timeline-icon{border-color:gold}
+.main-timeline8 .timeline:nth-child(4n) .year{background:rgba(0,150,70,0.6)}
+.main-timeline8 .timeline:nth-child(4n) .year:before{border-top-color:rgba(0,150,70,0.6)}
+@media only screen and (max-width:767px){.main-timeline8{overflow:visible; width:100%;}
+
+.main-timeline8:before{display:none;}
+.main-timeline8 .timeline:nth-child(2),.main-timeline8 .timeline:nth-child(even),.main-timeline8 .timeline:nth-child(odd){margin:0}
+.main-timeline8 .timeline{width:100%;float:none;padding:0 0 0 30px;margin-bottom:20px!important}
+.main-timeline8 .timeline:last-child{margin:0!important}
+    .main-timeline8 .timeline-content{padding:0;margin:0;}
+.main-timeline8 .timeline-icon{display:none;}
+.main-timeline8 .year{border-radius:50px 0 0 50px}
+.main-timeline8 .year:before{border-left:none;border-right:35px solid transparent;left:auto;right:0}
+.main-timeline8 .timeline-content{margin:0 2px 0 2px}
+    .main-timeline8 .timeline:nth-child(2n) .timeline-content{margin:0 2px 0 2px}
+    .main-timeline8 .timeline-icon{margin-top:-15px;}
+    .main-timeline8 .year:before {display:none;}
+    div.timeline {padding:0;}
+    .main-timeline8 .timeline {padding:0;}
+    .main-timeline8 .timeline:nth-child(2n) {padding:0;}
+    .main-timeline8 .year{border-radius:0;}
+    .main-timeline8 .timeline:nth-child(2n) .year {border-radius:0;}
+    .main-timeline8 .timeline{float:left;}
+    .main-timeline8 {padding-bottom:50px;}
+    
+        
+}
+
+

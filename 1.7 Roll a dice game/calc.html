@@ -1,0 +1,235 @@
+<html>
+<head> 
+<title> JavaScript Dice </title>    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <style>
+        body {
+            text-align: center;
+            margin:0 auto;
+            padding:20px;
+            width:60%;
+            background-image:url(calc.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            color:black;
+        }
+        button {
+            width:100%;
+            padding:10px;
+            background-color:aquamarine;
+            color:black;
+            border:2px solid white;
+            border-radius:10px;
+            
+        }
+        img {
+            margin:0 auto;
+            width:50%;
+            height:50%;
+           
+        }
+        li {
+            list-style: none;
+            
+        }
+        #addition, #subtraction, #multiplication, #division {
+            display:none;
+        }
+        
+    </style>
+   
+</head>
+
+<body>
+   <nav>
+       <ul> 
+           <a style="float:left;" class="nav" href="index.html"><li>DICE</li></a>
+           <a class="nav"  href="calc.html"><li>CALCULATOR</li></a>
+       </ul>
+   </nav>
+   <h1> CALCULATOR</h1>
+   
+      <h4 onclick="function1()">ADDITION</h4>
+           <div id="addition">
+               <input type="number" id="input1"> <br> <br>
+               <input type="number" id="input2"> <br><br>
+               <!-- DISPLAY RESULT HERE---------->
+               <div id="result"></div>
+               <br>
+               <input type="button" onclick="main1(this)" id="answer1" value="ADD">
+           </div>
+ 
+      
+       <h4 onclick="function2()">SUBTRACTION</h4>
+           <div id="subtraction">
+               <input type="number" id="input21"> <br><br>
+
+
+               <input type="number" id="input22"> <br><br>
+               <!-- DISPLAY RESULT---------->
+               <div id="result2"></div>
+               <br>
+               <input type="button" onclick="main2(this)" id="answer2" value="-">
+           </div>
+    
+     
+       <H4 onclick="function3()">MULTIPLICATION</H4>
+           <div id="multiplication"> 
+               <input type="number" id="input31"> <br><br>
+
+
+               <input type="number" id="input32"> <br><br>
+               <!-- DISPLAY RESULT---------->
+               <div id="result3"></div>
+               <br>
+               <input type="button" onclick="main3(this)" id="answer3" value="*">
+           </div>
+    
+     
+      <H4 onclick="function4()">DIVISION</H4>
+           <div id="division">
+               <input type="number" id="input41"> <br><br>
+
+               <input type="number" id="input42"> <br><br>
+               <!-- DISPLAY RESULT---------->
+               <div id="result4"></div>
+               <br>
+               <input type="button" onclick="main4(this)" id="answer4" value="/">
+           </div>
+    
+    
+    
+    <script>
+        
+        function main1() {
+            console.log(content.value);
+            var type=content.value;
+            var number1 = parseInt(input1.value);
+            var number2 = parseInt(input2.value);
+            var sum = calculate(number1, number2, type);
+            document.getElementById('result').innerHTML = sum;
+            }
+         function calculate(number1, number2, type) {
+            var sum;
+            switch (type) {
+                case "+":
+                    sum = number1 + number2;
+                case "-":
+                    sum = number1 - number2;
+                case "*":
+                    sum = number1 * number2;
+                case "/":
+                    sum = number1 / number2;
+            }
+            return sum;
+        
+        
+       /* function main2() {
+            var number1 = parseInt(input21.value);
+            var number2 = parseInt(input22.value);
+            var type = "-";
+            var sum = calculate(number1, number2, type);
+            document.getElementById('result').innerHTML = sum;
+            }
+        function main3() {
+            var number1 = parseInt(input31.value);
+            var number2 = parseInt(input32.value);
+            var type = "*";
+            var sum = calculate(number1, number2, type);
+            document.getElementById('result').innerHTML = sum;
+            }
+        function main4() {
+            var number1 = parseInt(input41.value);
+            var number2 = parseInt(input42.value);
+            var type = "/";
+            var sum = calculate(number1, number2, type);
+            document.getElementById('result').innerHTML = sum;
+            } */
+        
+       
+        
+        }
+        /*    function sumit(x,y) {
+                answer = x + y;
+                return answer;
+            }
+        
+     function main1() {
+            var number1 = parseInt(input1.value);
+            var number2 = parseInt(input2.value);
+            var sum = sumit(number1, number2, "+");
+            document.getElementById('result').innerHTML = sum;
+            }
+        
+            function sumit(x,y) {
+                answer = x + y;
+                return answer;
+            }
+        
+        function main2() {
+            var number1 = parseInt(input21.value);
+            var number2 = parseInt(input22.value);
+            var sum = minusit(number1, number2);
+            
+            document.getElementById('result2').innerHTML = sum;
+            }
+        
+            function minusit(x,y) {
+                answer = x - y;
+                return answer;
+        }
+        function main3() {
+            var number1 = parseInt(input31.value);
+            var number2 = parseInt(input32.value);
+            var sum = timesit(number1, number2);
+            
+            document.getElementById('result3').innerHTML = sum;
+            }
+        
+            function timesit(x,y) {
+                answer = x * y;
+                return answer;
+        }
+        function main4() {
+            var number1 = parseInt(input41.value);
+            var number2 = parseInt(input42.value);
+            var sum = divideit(number1, number2);
+           
+            document.getElementById('result4').innerHTML = sum;
+            }
+        
+            function divideit(x,y) {
+                answer = x / y;
+                return answer;
+        }*/
+    
+        function function1() {
+            document.getElementById('addition').style.display = 'block';
+            document.getElementById('subtraction').style.display = 'none';
+            document.getElementById('multiplication').style.display = 'none';
+            document.getElementById('division').style.display = 'none';
+        }
+         function function2() {
+            document.getElementById('addition').style.display = 'none';
+            document.getElementById('subtraction').style.display = 'block';
+            document.getElementById('multiplication').style.display = 'none';
+            document.getElementById('division').style.display = 'none';
+        }
+         function function3() {
+            document.getElementById('addition').style.display = 'none';
+            document.getElementById('subtraction').style.display = 'none';
+            document.getElementById('multiplication').style.display = 'block';
+            document.getElementById('division').style.display = 'none';
+        }
+         function function4() {
+            document.getElementById('addition').style.display = 'none';
+            document.getElementById('subtraction').style.display = 'none';
+            document.getElementById('multiplication').style.display = 'none';
+            document.getElementById('division').style.display = 'block';
+        }
+    
+    </script>
+</body>
+</html>

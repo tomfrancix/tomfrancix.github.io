@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MONEY MANAGER</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <header>
+            <div class="raining">
+                <video loop muted autoplay class="raining_video">
+                    
+                    <source src="rain.mp4" type="video/mp4">
+                    
+                </video>
+            </div>
+            <div class="display">
+                <p style="display:block; float:none; text-align: center;">AVAILABLE FUNDS:</p>
+                <h1 style="display:block;FONT-SIZE:350%;MARGIN:20PX;" class="budget__value">£ <span id="balance">0</span></h1>
+                <div id="income">
+                    <h4>INCOME</h4><p id="incomeDisplay">0</p><p>+£</p>
+                </div>
+                <div id="expenses">
+                    <h4>EXPENSES</h4><p id="expenseDisplay">0</p><p>-£</p>
+                </div>
+            </div>
+        </header>
+        <div class="row">
+           <div id="transactions" class="add-container">
+           
+            <select class="float add-type"  type="select" id="transactionType">
+                <option value="Please Select..." selected>Please Select...</option>
+                <option value="Deposit">INCOME</option>
+                <option value="Withdraw">EXPENSE</option>
+            </select>
+            
+            <input class="float add-description" type="text" id="description" placeholder="Transaction Description">
+            
+            <input class="float add-value" type="number" id="amount" placeholder="Value">
+              
+               <button class="float add-button" id="submit" type="button" name="submit" value="Complete Transaction" onclick="transact() ">SUBMIT</button>
+               
+            </div>
+        </div>
+        
+        <div class="container">
+            <div id="income-list">
+                <table>
+                    <tr style="border-top: none; border-bottom: 1px solid rgba(255,255,255,0.5);">
+                        <th class="left" style="color:chartreuse;">INCOME</th>
+                        <th style="font-size:70%; text-align: right; padding:0;">VALUE</th>
+                    </tr>
+                </table>
+                <table id="listincome">
+                    <tr>
+                        <td class="left">Website Project</td>
+                        <td class="righta">+2,500.00</td>
+                    </tr>
+                </table>    
+            </div>
+            <br class="dissapear">
+            <hr class="dissapear" style="width:95%;margin:0;">
+            <div id="expense-list">
+                <table>
+                    <tr style="border-top: none; border-bottom: 1px solid rgba(255,255,255,0.5);">
+                        <th class="left" style="color:indianred">EXPENSES</th>
+                        <th style="font-size:70%; text-align: right; padding:0;">VALUE</th>
+                    </tr>
+                </table>
+                <table id="listexpense">
+                    
+                </table>
+                    
+            </div>
+        </div>
+        <script>
+        balance.value = 0.00;
+        incomeDisplay.value = 0.00;
+        expenseDisplay.value = 0.00;
+        incomearr = [];
+        income_description = [];
+        expensearr = [];
+        expense_description = [];
+        
+        function transact() {
+            
+            var type = document.getElementById('transactionType').value;
+            var balance = document.getElementById('balance');
+            var description = document.getElementById('description').value;
+            var amount = document.getElementById('amount').value;
+            var amount = parseFloat(amount);
+            
+            
+           
+                
+            if (type === "Withdraw") {
+                alert(amount);
+                balance.value -= amount;
+                balance.innerHTML = balance.value;
+                expenseDisplay.value += amount;
+                expenseDisplay.innerHTML = expenseDisplay.value;
+                expensearr.push(amount);
+                expense_description.push(description);
+                
+                var tablerow='';
+                for (i = 0; i < expensearr.length; i++) {
+                  tablerow += "<tr><td class='left'>" + expense_description[i] + "</td><td class='righta'> - " + expensearr[i] + "</td></tr>";
+                }
+                 document.getElementById('listexpense').innerHTML = tablerow;
+                
+            } else if (type === "Deposit") {
+                alert(amount);
+                balance.value += amount;
+                balance.innerHTML = balance.value;
+                incomeDisplay.value += amount;
+                incomeDisplay.innerHTML = incomeDisplay.value;
+                incomearr.push(amount);
+                income_description.push(description);
+                
+                var tablerow='';
+                for (i = 0; i < incomearr.length; i++) {
+                  tablerow += "<tr><td class='left'>" + income_description[i] + "</td><td class='righta'> + " + incomearr[i] + "</td></tr>";
+                
+                }
+                 document.getElementById('listincome').innerHTML = tablerow;
+                
+               
+            } else {
+                document.getElementById('corrector').innerHTML = "You must enter a valid amount."
+            }
+            
+            
+            
+        };
+        
+        
+        
+    </script>
+    </body>
+</html>

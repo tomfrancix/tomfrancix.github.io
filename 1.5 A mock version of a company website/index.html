@@ -1,0 +1,168 @@
+<DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="Viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+       <header class="hidden noborder center">
+           
+            <div class="container-fluid center">
+              <div id="maintitle">
+              <h1 class="white1"> <span class="orange">ABC</span>Web Design</h1>
+                </div>
+            </div>
+             </header>
+        <header>
+            <div class="containerfluid">
+            <div id="navigation2">
+                    <ul>
+                        <li><a class="selected" href="#home">HOME</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
+                        <li><a href="services.html">SERVICES</a>
+                        <li><a href="contact.html">CONTACT</a></li>
+                    </ul>
+            </div>
+            </div>
+       </header>
+        <header class="block">
+           
+            <div class="container">
+                <div class="logo" id="logo"><h1 class="white"> <span class="orange">ABC</span>Web Design</h1></div>
+                <div id="navigation">
+                    <ul>
+                        <li><a class="selected" href="#home">HOME</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
+                        <li><a href="services.html">SERVICES</a>
+                        <li><a href="contact.html">CONTACT</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <div class="backgroundimage center"><br>
+            <h1 class="yellow">Affordable Web Design</h1>
+            <p class="yellow">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+        </div>
+         <center><div id="subscribe">
+           <div class="container margin"> 
+               
+                <div class="left"> <h2> Subscribe to monthly newsletter</h2></div>
+                <div class="right">
+                    <form>
+                        <input type="email" name="email" class="emailer form-control" placeholder="Please enter you email">
+                        <button type="submit" class="button" value="Submit" name="submit">Submit</button>
+                    </form>
+                </div>
+                
+            </div>
+        </div></center>
+        
+        <div class="container" id="containerbox">
+           <div class="popup" id="popup" >
+               <br>
+               <br>
+                <h1>More Information About HTML</h1>
+                
+            </div>
+            <div class="popup" id="popup2" >
+               <br>
+               <br>
+                <h1>More Information About CSS</h1>
+            </div>
+            <div class="popup" id="popup3" >
+               <br>
+               <br>
+               <h1>More Information About JavaScript</h1>
+            </div>
+            <div id="flex1"  onclick="myFunction4();" onmouseover="myFunction();">
+                <img src="html.jpg">
+                <h4>HTML5</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                
+       
+            <div class="popup2" id="popup1" >
+                <h4>More Information About HTML</h4><br>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <button class="btn btn-info" type="button">Find Out More...</button>
+            </div> </div>
+            <div id="flex2"  onclick="myFunction5();" onmouseover="myFunction2();">
+                <img src="css.jpg">
+                <h4>CSS3</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            
+            <div class="popup2" id="popup12" >
+                <h4>More Information About CSS</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <button class="btn btn-info" type="button">Find Out More...</button>
+            </div></div>
+            <div id="flex3"  onclick="myFunction6();" onmouseover="myFunction3();">
+                <img src="js.jpg">
+                <h4>JavaScript</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+           
+            <div class="popup2" id="popup13" >
+                <h4>More Information About JavaScript</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <button class="btn btn-info" type="button">Find Out More...</button>
+            </div>
+             </div>
+       </div>
+       <footer>
+           <h4> ABC Web Design and Developer &copy; 2020 </h4>
+       </footer>
+       <script>
+function myFunction() {
+  var x = document.getElementById("popup");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+    
+}
+           function myFunction2() {
+  var x = document.getElementById("popup2");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+           function myFunction3() {
+  var x = document.getElementById("popup3");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+           function myFunction4() {
+  var x = document.getElementById("popup1");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+    
+}
+           function myFunction5() {
+  var x = document.getElementById("popup12");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+           function myFunction6() {
+  var x = document.getElementById("popup13");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+        </script>
+    </body>
+</html>
